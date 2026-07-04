@@ -29,7 +29,12 @@
         "groups": [
           {
             "group": "Inicio",
-            "pages": ["introduction", "quickstart", "account-setup"]
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup",
+              "mobile-app"
+            ]
           },
           {
             "group": "Plataformas",
