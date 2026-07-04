@@ -1,0 +1,47 @@
+---
+title: "Conecta tu Cuenta de Spotify for Artists a Addictiva Records"
+sidebarTitle: "Spotify"
+description: "Vincula Spotify for Artists con Addictiva Records para ver tus streams, oyentes mensuales y estadísticas de perfil directamente en tu dashboard."
+---
+
+Spotify es la plataforma de streaming más grande del mundo y una fuente clave de datos para cualquier artista. Al conectar tu cuenta de **Spotify for Artists** con Addictiva Records, puedes consultar tus métricas de rendimiento — streams, oyentes mensuales, colocaciones en playlists y seguidores — sin salir de tu panel central. La conexión se realiza de forma segura a través del protocolo OAuth 2.0, de modo que nunca necesitas compartir tu contraseña de Spotify con Addictiva Records.
+
+## Cómo conectar Spotify
+
+<Steps>
+  <Step title="Accede a tu Dashboard de Addictiva Records">
+    Inicia sesión en tu cuenta de Addictiva Records y dirígete al menú lateral. Haz clic en **Plataformas** para abrir el centro de conexiones.
+  </Step>
+  <Step title="Selecciona Spotify">
+    Dentro de la sección Plataformas, localiza la tarjeta de **Spotify** y haz clic en **Conectar**.
+  </Step>
+  <Step title="Autoriza con Spotify for Artists">
+    Serás redirigido a la página oficial de Spotify. Inicia sesión con las credenciales de tu cuenta de **Spotify for Artists** y acepta los permisos que solicita Addictiva Records. Una vez autorizado, serás devuelto automáticamente a tu dashboard.
+  </Step>
+  <Step title="Confirma la conexión">
+    En la tarjeta de Spotify verás el estado cambiado a **Conectado** junto con el nombre de tu perfil artístico. Los datos comenzarán a sincronizarse en los próximos minutos.
+  </Step>
+</Steps>
+
+## Datos que se sincronizan
+
+Una vez conectada tu cuenta, Addictiva Records importa y actualiza periódicamente las siguientes métricas desde Spotify for Artists:
+
+- **Streams totales** — número acumulado de reproducciones de todas tus canciones.
+- **Oyentes mensuales** — audiencia única que te escuchó en los últimos 28 días.
+- **Colocaciones en playlists** — playlists editoriales y algorítmicas donde aparecen tus canciones.
+- **Seguidores** — total de usuarios que siguen tu perfil de artista en Spotify.
+
+<Note>
+  La publicación de nuevos lanzamientos en Spotify no se realiza directamente desde la integración de Spotify. Para distribuir música a Spotify, utiliza la integración con **DistroKid** o **TuneCore** disponibles en Addictiva Records. Una vez distribuida, las estadísticas de esas canciones aparecerán automáticamente en tu sección de Spotify.
+</Note>
+
+## Preguntas frecuentes
+
+<Accordion title="¿Qué permisos solicita Addictiva Records a Spotify?">
+  Addictiva Records solicita únicamente permisos de **lectura** a través de la API de Spotify for Artists. Esto incluye acceso a estadísticas de streams, datos de oyentes, información de playlists y métricas de perfil. No se solicitan permisos para modificar tu perfil, subir contenido ni gestionar tu biblioteca personal de Spotify. Puedes revisar y revocar estos permisos en cualquier momento desde **Configuración de tu cuenta de Spotify → Aplicaciones**.
+</Accordion>
+
+<Accordion title="¿Con qué frecuencia se actualizan los datos?">
+  Los datos de Spotify se sincronizan automáticamente **cada 24 horas**. Ten en cuenta que Spotify for Artists tiene su propio ciclo de actualización de métricas (generalmente con un retraso de 2 a 3 días para datos de streams detallados), por lo que es posible que los números más recientes no estén disponibles de inmediato. Puedes forzar una sincronización manual en cualquier momento haciendo clic en el botón **Actualizar datos** dentro de la tarjeta de Spotify en tu panel.
+</Accordion>

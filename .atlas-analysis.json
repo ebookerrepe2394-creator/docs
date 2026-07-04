@@ -1,30 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "saas",
+  "projectName": "Addictiva Records – Music Distribution Hub",
+  "projectDescription": "A single dashboard that connects and manages all your accounts across every music upload and distribution platform.",
   "theme": "almond",
-  "name": "Addictiva Records",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Soporte",
-        "href": "mailto:soporte@adictivarecords.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Entrar al Dashboard",
-      "href": "https://app.adictivarecords.com"
-    }
-  },
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -78,10 +59,20 @@
       }
     ]
   },
-  "footer": {
-    "socials": {
-      "instagram": "https://instagram.com/adictivarecords",
-      "x": "https://x.com/adictivarecords"
-    }
-  }
+  "keyFeatures": [
+    "Conexión centralizada con todas las plataformas de música (Spotify, Apple Music, YouTube Music, SoundCloud, DistroKid, TuneCore, etc.)",
+    "Subida y distribución de canciones desde un solo lugar",
+    "Gestión de metadatos (título, artista, álbum, género, portada)",
+    "Panel de analíticas unificado: streams, oyentes y ganancias por plataforma",
+    "Programación y seguimiento de lanzamientos",
+    "Notificaciones de estado de distribución en tiempo real"
+  ],
+  "publicApiSurface": [
+    "Conectar cuenta de plataforma (OAuth / API Key)",
+    "Subir canción (título, archivo de audio, portada, metadatos)",
+    "Distribuir lanzamiento a plataformas seleccionadas",
+    "Consultar estado de distribución",
+    "Ver estadísticas de reproducción y ganancias",
+    "Gestionar catálogo de canciones"
+  ]
 }

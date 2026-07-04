@@ -1,0 +1,217 @@
+---
+title: "Solución de Problemas Comunes en Addictiva Records"
+sidebarTitle: "Problemas Comunes"
+description: "Resuelve los problemas más frecuentes al conectar plataformas, subir música o verificar el estado de distribución en Addictiva Records."
+---
+
+Aunque Addictiva Records está diseñado para que todo funcione de forma fluida, sabemos que a veces pueden surgir inconvenientes técnicos. En esta página encontrarás soluciones paso a paso para los problemas más reportados por nuestra comunidad. Si después de seguir estas indicaciones el problema persiste, nuestro equipo de soporte está disponible para ayudarte.
+
+## Conexión de plataformas
+
+<Accordion title="No puedo conectar mi cuenta de Spotify">
+  Si la conexión con Spotify for Artists falla o no se completa, sigue estos pasos:
+
+  <Steps>
+    <Step title="Verifica los permisos en Spotify for Artists">
+      Accede a [Spotify for Artists](https://artists.spotify.com) y ve a **Configuración → Acceso de aplicaciones de terceros**. Asegúrate de que Addictiva Records tiene permiso para acceder a tu cuenta. Si no aparece en la lista, el proceso de autorización no se completó correctamente.
+    </Step>
+    <Step title="Desconecta y vuelve a conectar">
+      En Addictiva Records, ve a **Configuración → Plataformas conectadas**, haz clic en **Desconectar** junto a Spotify y espera 30 segundos. Luego haz clic en **Conectar Spotify** e inicia el proceso de autorización OAuth desde cero.
+    </Step>
+    <Step title="Prueba en modo incógnito">
+      Las cookies o extensiones del navegador pueden interferir con el flujo de autorización. Intenta el proceso desde una ventana de incógnito o un navegador diferente.
+    </Step>
+  </Steps>
+
+  <Warning>
+    Asegúrate de que la cuenta de Spotify que estás autorizando es la misma que está asociada a tu perfil de Spotify for Artists. Conectar una cuenta de oyente regular no funcionará.
+  </Warning>
+</Accordion>
+
+<Accordion title="La conexión con DistroKid falla constantemente">
+  Los problemas de conexión con DistroKid suelen tener una de estas causas:
+
+  <Steps>
+    <Step title="Verifica que la clave API es correcta">
+      En DistroKid, ve a **Cuenta → Configuración de API** y copia la clave más reciente. Pégala nuevamente en Addictiva Records desde **Configuración → Plataformas conectadas → DistroKid**. Asegúrate de no incluir espacios al inicio o al final.
+    </Step>
+    <Step title="Revisa el estado de tu cuenta en DistroKid">
+      Una suscripción vencida o una cuenta suspendida en DistroKid bloquea el acceso a su API. Ingresa directamente a [distrokid.com](https://distrokid.com) y confirma que tu plan está activo.
+    </Step>
+    <Step title="Genera una nueva clave API">
+      Si la clave es antigua, puede haber expirado. Genera una nueva desde el panel de DistroKid y actualízala en Addictiva Records.
+    </Step>
+  </Steps>
+
+  <Note>
+    DistroKid ocasionalmente realiza mantenimientos programados que pueden interrumpir temporalmente el acceso a su API. Si todo parece estar correcto, espera unos minutos e intenta nuevamente.
+  </Note>
+</Accordion>
+
+<Accordion title="Los datos de Apple Music no se actualizan">
+  La integración con Apple Music opera con un ciclo de actualización diferente al de otras plataformas:
+
+  - **Los datos de Apple Music se sincronizan una vez por semana**, generalmente los martes. No es posible forzar una actualización en tiempo real.
+  - Si los datos llevan **más de 10 días sin actualizarse**, el problema puede ser que tu token de MusicKit haya expirado.
+
+  <Steps>
+    <Step title="Verifica el estado del token de MusicKit">
+      Ve a **Configuración → Plataformas conectadas → Apple Music** y revisa la fecha de expiración del token. Los tokens de MusicKit tienen una vigencia de **180 días**.
+    </Step>
+    <Step title="Renueva el token">
+      Si el token expiró, haz clic en **Renovar conexión** y sigue el proceso de autorización con tu cuenta de Apple Developer o Apple for Artists.
+    </Step>
+  </Steps>
+
+  <Info>
+    Apple Music no ofrece datos en tiempo real a ninguna plataforma de terceros. Este comportamiento es una limitación del sistema de Apple, no de Addictiva Records.
+  </Info>
+</Accordion>
+
+---
+
+## Subida de archivos
+
+<Accordion title="Mi archivo de audio fue rechazado al subirlo">
+  El rechazo de un archivo de audio puede deberse a varias razones. Verifica lo siguiente:
+
+  - **Formato:** solo se aceptan WAV, MP3 y FLAC. Formatos como AAC, OGG o M4A no son compatibles.
+  - **Tasa de muestreo (sample rate):** debe ser de **44.1 kHz como mínimo**. Archivos a 22 kHz o 32 kHz serán rechazados.
+  - **Profundidad de bits (bit depth):** mínimo **16 bits**. Se recomienda 24 bits para la mejor calidad.
+  - **Canales:** el archivo debe estar en **estéreo** (2 canales). Los archivos mono pueden ser rechazados por algunas plataformas.
+  - **Duración:** los archivos de menos de 30 segundos pueden ser rechazados por algunos distribuidores.
+
+  <Tip>
+    Puedes verificar las propiedades técnicas de tu archivo de forma gratuita con herramientas como **MediaInfo** o **Adobe Audition**. Si necesitas convertir el archivo, usa **Audacity** o **FFmpeg**.
+  </Tip>
+</Accordion>
+
+<Accordion title="La imagen de portada no es aceptada">
+  Si tu portada es rechazada durante la carga, revisa que cumpla con todos estos requisitos:
+
+  - **Dimensiones exactas:** 3000 × 3000 píxeles. No se aceptan imágenes rectangulares ni cuadradas de menor resolución.
+  - **Formato:** JPG o PNG únicamente.
+  - **Tamaño de archivo:** máximo **10 MB**.
+  - **Modo de color:** debe estar en modo **RGB**. Las imágenes en modo CMYK serán rechazadas.
+  - **Contenido:** no debe incluir logos de plataformas (Spotify, Apple Music, etc.), URLs, precios ni texto de carácter publicitario.
+
+  <Warning>
+    Algunas plataformas como Spotify aplican revisión manual a las portadas. Aunque Addictiva Records acepte la imagen, el distribuidor o la plataforma final puede rechazarla si el contenido visual no cumple sus políticas.
+  </Warning>
+</Accordion>
+
+<Accordion title="La subida se detiene a mitad del proceso">
+  Si una carga se interrumpe antes de completarse, prueba las siguientes soluciones en orden:
+
+  <Steps>
+    <Step title="Verifica tu conexión a internet">
+      Las cargas de archivos grandes requieren una conexión estable. Evita usar redes WiFi públicas o conexiones con alta latencia. Si es posible, conéctate por cable Ethernet.
+    </Step>
+    <Step title="Prueba con un navegador diferente">
+      Algunas extensiones del navegador (bloqueadores de anuncios, VPNs integradas) pueden interrumpir las cargas. Prueba con **Google Chrome** o **Mozilla Firefox** en su versión más reciente.
+    </Step>
+    <Step title="Limpia la caché del navegador">
+      Ve a la configuración de tu navegador y borra la caché y las cookies. Luego reinicia el navegador e intenta la carga nuevamente.
+    </Step>
+    <Step title="Reduce el tamaño del archivo si es posible">
+      Si el archivo es mayor a 300 MB, intenta convertirlo a FLAC para reducir su peso sin perder calidad, y repite la carga.
+    </Step>
+  </Steps>
+
+  <Note>
+    Addictiva Records guarda el progreso de carga automáticamente durante los primeros 60 minutos. Si cierras la pestaña por accidente, vuelve a la sección de carga y es posible que encuentres la opción de **reanudar** la subida.
+  </Note>
+</Accordion>
+
+---
+
+## Distribución
+
+<Accordion title="Mi lanzamiento lleva varios días con el estado 'En revisión'">
+  El estado **"En revisión"** es completamente normal en el proceso de distribución. Los tiempos estándar son:
+
+  - **Revisión por parte del distribuidor:** entre 1 y 5 días hábiles.
+  - **Revisión por parte de las plataformas:** entre 3 y 10 días hábiles adicionales.
+
+  En total, el proceso completo puede tomar hasta **10 días hábiles** en condiciones normales. Durante fechas especiales (Navidad, temporadas de premios musicales, etc.) los tiempos pueden extenderse.
+
+  <Warning>
+    Si tu lanzamiento lleva **más de 15 días hábiles** en estado "En revisión" sin ninguna actualización, contacta a nuestro equipo de soporte. Es posible que haya un problema con el distribuidor que requiere intervención manual.
+  </Warning>
+</Accordion>
+
+<Accordion title="Una plataforma rechazó mi lanzamiento">
+  Cuando una plataforma rechaza un lanzamiento, el motivo del rechazo aparece en la sección **Catálogo → Lanzamientos → [nombre del lanzamiento] → Historial de estado**. Las causas más comunes son:
+
+  - **Errores de metadatos:** nombre del artista inconsistente, ISRC duplicado o inválido, o información de autoría incompleta.
+  - **Problemas con el artwork:** portada que no cumple las dimensiones, contiene texto prohibido o tiene baja resolución.
+  - **Contenido duplicado:** el mismo lanzamiento ya existe en la plataforma bajo otro distribuidor. Debes retirar la versión anterior antes de redistribuir.
+  - **Derechos de autor:** el contenido fue identificado como material con copyright de terceros sin la licencia correspondiente.
+
+  <Steps>
+    <Step title="Lee el motivo del rechazo">
+      Accede al historial de estado del lanzamiento y copia el mensaje exacto de rechazo.
+    </Step>
+    <Step title="Corrige el problema">
+      Edita los metadatos, reemplaza el artwork o regulariza la situación de licencias según corresponda.
+    </Step>
+    <Step title="Vuelve a enviar el lanzamiento">
+      Una vez corregido, haz clic en **"Reenviar a revisión"** desde el panel del lanzamiento.
+    </Step>
+  </Steps>
+</Accordion>
+
+<Accordion title="Mi música aparece en Spotify pero no en Apple Music">
+  Esto es completamente normal. Cada plataforma tiene su propio proceso de revisión e indexación, con tiempos independientes entre sí. Que un lanzamiento esté disponible en Spotify no garantiza que Apple Music lo haya procesado aún.
+
+  - **Spotify** suele procesar los lanzamientos en 3-5 días hábiles.
+  - **Apple Music** puede tardar entre 5 y 10 días hábiles.
+  - **Amazon Music** puede tardar hasta 7 días hábiles.
+
+  <Info>
+    Puedes hacer seguimiento del estado de tu lanzamiento en cada plataforma individualmente desde **Catálogo → Lanzamientos → [nombre del lanzamiento] → Estado por plataforma**.
+  </Info>
+</Accordion>
+
+---
+
+## Analíticas
+
+<Accordion title="Los números de mis streams no coinciden con los de Spotify for Artists">
+  Es normal que exista una pequeña diferencia entre los datos que ves en Addictiva Records y los que muestra Spotify for Artists directamente. Esto se debe a que:
+
+  - Addictiva Records sincroniza los datos de Spotify **cada 24 horas**, por lo que siempre hay un desfase de hasta un día.
+  - Spotify actualiza sus propias métricas internas con mayor frecuencia.
+  - Los datos consolidados pueden diferir ligeramente por diferencias de zona horaria en el conteo.
+
+  <Tip>
+    Para ver los números más recientes en tiempo real, siempre puedes acceder directamente a [Spotify for Artists](https://artists.spotify.com). Addictiva Records es ideal para el seguimiento histórico y la comparación entre plataformas.
+  </Tip>
+</Accordion>
+
+<Accordion title="No veo ingresos en mi panel aunque tengo muchos streams">
+  Si tus canciones están activas y acumulando reproducciones pero no ves ingresos reflejados en el panel, ten en cuenta lo siguiente:
+
+  - Las plataformas de streaming reportan los datos de regalías a los distribuidores con un **desfase de 2 a 3 meses**.
+  - Los distribuidores, a su vez, procesan y transfieren esos datos a Addictiva Records en sus ciclos de liquidación habituales.
+  - Los ingresos de streams de enero, por ejemplo, suelen estar disponibles entre marzo y abril.
+
+  <Note>
+    Si ya han pasado más de 3 meses desde que comenzaste a acumular streams significativos y aún no ves ningún ingreso, verifica que tu información de pago en tu distribuidor esté correctamente configurada. Addictiva Records no gestiona pagos directamente; eso lo hace el distribuidor.
+  </Note>
+</Accordion>
+
+---
+
+## ¿Necesitas más ayuda?
+
+Si ninguna de las soluciones anteriores resolvió tu problema, nuestro equipo está listo para asistirte.
+
+<CardGroup cols={2}>
+  <Card title="Contactar Soporte" icon="envelope" href="mailto:soporte@adictivarecords.com">
+    Escríbenos directamente y un agente de soporte te responderá en un plazo máximo de 24 horas hábiles.
+  </Card>
+  <Card title="Ver Preguntas Frecuentes" icon="circle-question" href="/help/faq">
+    Consulta nuestra sección de preguntas frecuentes para encontrar respuestas rápidas a las dudas más comunes.
+  </Card>
+</CardGroup>

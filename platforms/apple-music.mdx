@@ -1,0 +1,47 @@
+---
+title: "Conecta Apple Music y Apple Music for Artists a tu Dashboard"
+sidebarTitle: "Apple Music"
+description: "Sincroniza Apple Music for Artists con Addictiva Records para monitorear reproducciones, compras y estadísticas de oyentes en tiempo real."
+---
+
+Apple Music es una de las plataformas de streaming con mayor fidelidad de pago por reproducción, y sus datos analíticos ofrecen información valiosa sobre el comportamiento de tu audiencia. Al integrar **Apple Music for Artists** con Addictiva Records, puedes visualizar reproducciones, compras de canciones y álbumes, datos de detección por Shazam y la demografía de tus oyentes, todo desde tu panel central. La conexión se establece mediante una clave de API generada desde tu cuenta de Apple Developer.
+
+## Cómo conectar Apple Music
+
+<Steps>
+  <Step title="Genera tu token de MusicKit en Apple Developer">
+    Inicia sesión en el [Portal de Apple Developer](https://developer.apple.com). En el menú **Certificates, Identifiers & Profiles**, selecciona **Keys** y crea una nueva clave habilitando el servicio **MusicKit**. Descarga el archivo de clave (`.p8`) — solo podrás descargarlo una vez.
+  </Step>
+  <Step title="Reúne tus credenciales de Apple Developer">
+    Anota los siguientes datos que necesitarás: el **Key ID** de la clave que acabas de crear, tu **Team ID** (visible en la esquina superior derecha del portal) y el contenido del archivo `.p8`.
+  </Step>
+  <Step title="Ingresa las credenciales en Addictiva Records">
+    En tu dashboard de Addictiva Records, ve a **Plataformas → Apple Music** y haz clic en **Conectar**. Introduce el **Key ID**, el **Team ID** y pega el contenido del archivo `.p8` en los campos correspondientes. Haz clic en **Guardar y verificar**.
+  </Step>
+  <Step title="Vincula tu perfil de Apple Music for Artists">
+    Una vez validadas las credenciales, Addictiva Records buscará el perfil artístico asociado a tu cuenta. Selecciona el perfil correcto y confirma la vinculación. Los datos comenzarán a importarse en los próximos minutos.
+  </Step>
+</Steps>
+
+## Datos que se sincronizan
+
+Con la integración activa, Addictiva Records importa las siguientes métricas desde Apple Music for Artists:
+
+- **Reproducciones** — número total de veces que se han reproducido tus canciones en Apple Music.
+- **Compras** — ventas individuales de canciones y álbumes realizadas a través de iTunes Store.
+- **Datos de Shazam** — número de identificaciones de tus canciones a través de la aplicación Shazam.
+- **Demografía de oyentes** — edad, género y ubicación geográfica de tu audiencia en Apple Music.
+
+<Warning>
+  Apple requiere que generes un **token de desarrollador de MusicKit** desde una cuenta activa de Apple Developer Program para autenticar la conexión con Addictiva Records. Este token tiene una validez máxima de 6 meses, después de la cual deberás regenerarlo y actualizar las credenciales en tu dashboard para mantener la sincronización activa. Addictiva Records te enviará un aviso por correo electrónico 14 días antes de que expire tu token.
+</Warning>
+
+## Preguntas frecuentes
+
+<Accordion title="¿Necesito una cuenta de Apple Developer?">
+  Sí. Para conectar Apple Music for Artists con Addictiva Records es necesario tener una cuenta activa del **Apple Developer Program**, que tiene un costo anual de 99 USD. Esta cuenta es la que te permite generar la clave MusicKit requerida para la autenticación. Si ya tienes una cuenta de Apple Developer para otras aplicaciones o servicios, puedes usar la misma: simplemente crea una clave nueva con MusicKit habilitado desde el portal. Si no tienes una cuenta de Apple Developer, deberás registrarte en [developer.apple.com](https://developer.apple.com) antes de continuar.
+</Accordion>
+
+<Accordion title="¿Cuánto tiempo tarda en sincronizar?">
+  La primera sincronización puede tardar entre **15 y 30 minutos** dependiendo del volumen de lanzamientos y datos históricos asociados a tu perfil. A partir de esa sincronización inicial, los datos se actualizan automáticamente **cada 24 horas**. Los datos de Shazam pueden tener un retraso adicional de hasta 48 horas según los ciclos de actualización internos de Apple. Si tras 30 minutos no ves datos en tu panel, verifica que las credenciales sean correctas en **Plataformas → Apple Music → Configuración**.
+</Accordion>

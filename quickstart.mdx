@@ -1,47 +1,69 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: "Primeros Pasos con Addictiva Records en 5 Minutos"
+sidebarTitle: "Quickstart"
+description: "Aprende a crear tu cuenta, conectar tus plataformas musicales y subir tu primera canción en Addictiva Records en menos de 5 minutos."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
+Esta guía te llevará desde cero hasta tener tu primera canción distribuida en múltiples plataformas en menos de 5 minutos. No necesitas conocimientos técnicos previos ni una cuenta activa en ninguna plataforma de distribución para comenzar: podrás conectar tus servicios existentes o crear cuentas nuevas directamente desde el flujo de configuración de Addictiva Records.
 
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
+<Tip>
+  Para obtener la mejor calidad de audio en todas las plataformas, te recomendamos subir tus archivos en formato **WAV de 24 bits a 44.1 kHz**. Este es el estándar de la industria musical y garantiza que tu música suene exactamente como la produjiste, sin pérdidas de calidad en la conversión. También se aceptan archivos MP3 a 320 kbps como alternativa.
+</Tip>
 
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+## Configuración inicial paso a paso
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Crear tu cuenta en Addictiva Records">
+    Dirígete a [app.addictivarecords.com](https://app.addictivarecords.com) y elige cómo quieres registrarte:
 
-    ```bash
-    npm install your-package
-    ```
+    - **Con email y contraseña:** Ingresa tu correo electrónico, crea una contraseña segura (mínimo 8 caracteres) y confirma tu cuenta a través del correo de verificación que recibirás.
+    - **Con Google:** Haz clic en **"Continuar con Google"** y autoriza el acceso con tu cuenta de Google. No se requiere verificación adicional.
+
+    Una vez dentro, completa tu perfil de artista con tu nombre artístico, género musical principal y una foto de perfil. Estos datos aparecerán en tus lanzamientos.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
+  <Step title="Conectar al menos una plataforma de distribución">
+    Desde el menú lateral, navega a **Plataformas → Conectar Plataforma**. Te recomendamos comenzar conectando al menos una de las siguientes:
 
-    ```bash
-    your-cli init
-    ```
+    - **DistroKid:** Ingresa tus credenciales de DistroKid y autoriza el acceso a tu catálogo.
+    - **TuneCore:** Conecta tu cuenta de TuneCore mediante OAuth para sincronizar lanzamientos existentes.
+    - **Spotify for Artists:** Vincula tu perfil de artista en Spotify para acceder a analíticas y gestionar tu perfil directamente.
+
+    Puedes conectar tantas plataformas como desees en este momento o añadir más tarde desde la sección de **Configuración de Plataformas**.
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
+  <Step title="Subir tu primera canción">
+    Ve a **Música → Subir Nuevo Lanzamiento** y completa los siguientes campos:
 
-    ```bash
-    your-cli start
-    ```
+    - **Archivo de audio:** Arrastra tu archivo WAV o MP3 al área designada, o haz clic para buscarlo en tu ordenador.
+    - **Metadatos del lanzamiento:** Título de la canción, nombre del artista principal, artistas colaboradores, género, subgénero, año de composición y código ISRC (si ya tienes uno asignado; de lo contrario, Addictiva Records puede generarlo automáticamente).
+    - **Portada del álbum/single:** Sube la imagen de portada que representará tu lanzamiento.
+
+    <Warning>
+      La portada de tu lanzamiento debe tener exactamente **3000 × 3000 píxeles** en formato **JPG o PNG** con una resolución mínima de 72 DPI. Imágenes que no cumplan estos requisitos serán rechazadas por las plataformas de distribución. Asegúrate también de que la portada no contenga logotipos de terceros, URLs ni información de contacto visible.
+    </Warning>
+  </Step>
+  <Step title="Distribuir a las plataformas seleccionadas">
+    Una vez cargados el audio y los metadatos, accede a la pantalla de **Distribución**. Verás la lista de todas tus plataformas conectadas con casillas de selección. Marca aquellas a las que deseas enviar el lanzamiento y, opcionalmente, establece una **fecha de lanzamiento programada**. Haz clic en **"Distribuir ahora"** (o **"Programar lanzamiento"** si elegiste una fecha futura) para enviar tu música.
+  </Step>
+  <Step title="Ver el estado del lanzamiento en el dashboard">
+    Una vez enviado, tu lanzamiento aparecerá en **Música → Mis Lanzamientos** con un estado en tiempo real por plataforma:
+
+    - 🟡 **En revisión:** La plataforma está procesando y verificando tu envío.
+    - 🟢 **Publicado:** Tu música ya está disponible para el público en esa plataforma.
+    - 🔴 **Rechazado:** Hubo un problema con el envío. Haz clic en el lanzamiento para ver los detalles del error y corregirlo.
+
+    Recibirás notificaciones por correo electrónico y dentro de la app cuando el estado de cada plataforma cambie.
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## ¿Qué sigue?
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+Una vez que tu primera canción esté distribuida, explora el resto de las funciones de Addictiva Records para llevar tu carrera al siguiente nivel.
+
+<CardGroup cols={2}>
+  <Card title="Ver mis Analíticas" icon="chart-bar" href="/analytics/dashboard">
+    Monitorea reproducciones, oyentes y ganancias en tiempo real desde el dashboard unificado.
+  </Card>
+  <Card title="Configurar mi Cuenta" icon="user" href="/account-setup">
+    Personaliza tu perfil de artista, gestiona pagos y configura notificaciones.
+  </Card>
+</CardGroup>

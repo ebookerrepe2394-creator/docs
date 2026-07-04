@@ -1,0 +1,51 @@
+---
+title: "Conecta YouTube Music y YouTube Studio a Addictiva Records"
+sidebarTitle: "YouTube Music"
+description: "Vincula tu canal de YouTube con Addictiva Records para rastrear reproducciones, suscriptores y ganancias de YouTube Music desde tu dashboard central."
+---
+
+YouTube es simultáneamente la plataforma de video más grande del mundo y uno de los servicios de streaming musical más utilizados a través de YouTube Music. Al conectar tu canal de YouTube con Addictiva Records mediante Google OAuth, podrás monitorear vistas, tiempo de visualización, suscriptores, streams en YouTube Music y ganancias generadas por tu contenido, todo desde tu panel central sin tener que abrir YouTube Studio por separado.
+
+## Cómo conectar YouTube Music
+
+<Steps>
+  <Step title="Accede a la sección de Plataformas">
+    Inicia sesión en Addictiva Records y haz clic en **Plataformas** en el menú lateral. Localiza la tarjeta de **YouTube Music** y haz clic en **Conectar**.
+  </Step>
+  <Step title="Inicia sesión con tu cuenta de Google">
+    Serás redirigido a la pantalla de autorización de Google. Inicia sesión con la cuenta de Google propietaria del canal de YouTube que deseas conectar.
+  </Step>
+  <Step title="Autoriza los permisos de YouTube">
+    Google te mostrará los permisos que solicita Addictiva Records. Revísalos y haz clic en **Permitir** para otorgar el acceso. La autorización utiliza el protocolo OAuth 2.0, por lo que tus credenciales de Google nunca son compartidas con Addictiva Records.
+  </Step>
+  <Step title="Selecciona tu canal">
+    Si tu cuenta de Google tiene asociados varios canales de YouTube, Addictiva Records te pedirá que selecciones cuál deseas vincular. Elige el canal artístico principal y confirma la selección.
+  </Step>
+  <Step title="Verifica la conexión">
+    Regresarás automáticamente a tu dashboard. La tarjeta de YouTube Music mostrará el estado **Conectado** junto con el nombre y la foto de tu canal. Los datos comenzarán a sincronizarse en breve.
+  </Step>
+</Steps>
+
+## Datos que se sincronizan
+
+Una vez establecida la conexión, Addictiva Records importa las siguientes métricas desde YouTube Studio y YouTube Music:
+
+- **Vistas totales** — reproducciones acumuladas de todos los videos de tu canal.
+- **Tiempo de visualización** — horas totales que los usuarios han visto tu contenido.
+- **Suscriptores** — total actual y evolución de los suscriptores de tu canal.
+- **Streams en YouTube Music** — reproducciones de tus canciones específicamente dentro de la app de YouTube Music.
+- **Ingresos estimados** — ganancias por publicidad y participación en YouTube Premium, en los canales monetizados.
+
+<Info>
+  La distribución de tu música a **YouTube Music** y la gestión de **Content ID** no se realiza directamente desde la integración de YouTube en Addictiva Records. Para que tus canciones estén disponibles en YouTube Music y para proteger tu contenido con Content ID, utiliza la integración con **DistroKid** o **TuneCore** desde el mismo panel. Una vez que tus lanzamientos estén distribuidos, sus streams en YouTube Music aparecerán automáticamente en tu sección de estadísticas de YouTube.
+</Info>
+
+## Preguntas frecuentes
+
+<Accordion title="¿Puedo conectar varios canales de YouTube?">
+  Actualmente, Addictiva Records permite conectar **un canal de YouTube por cuenta de artista**. Si necesitas monitorear múltiples canales (por ejemplo, un canal principal y un canal de contenido detrás de escenas), deberás elegir cuál es el prioritario para la sincronización de estadísticas. Si en el futuro necesitas cambiar el canal conectado, ve a **Plataformas → YouTube Music**, desconecta el canal actual y vuelve a realizar el proceso de autorización con el canal deseado.
+</Accordion>
+
+<Accordion title="¿Qué pasa con los ingresos de YouTube Premium?">
+  Los ingresos generados por suscriptores de **YouTube Premium** que escuchan tu música están incluidos en las métricas de ingresos estimados que Addictiva Records importa desde YouTube Studio. Estos ingresos representan tu participación en el fondo de distribución de YouTube Premium, que se calcula en función del tiempo de visualización de tus videos por parte de los usuarios Premium. Ten en cuenta que YouTube reporta los ingresos con un retraso de aproximadamente 30 días, por lo que los montos más recientes pueden no reflejarse de inmediato en tu panel.
+</Accordion>

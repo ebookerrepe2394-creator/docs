@@ -1,0 +1,95 @@
+---
+title: "Cómo Editar los Metadatos de tus Canciones en Addictiva Records"
+sidebarTitle: "Metadatos"
+description: "Gestiona título, artistas, compositores, ISRC, UPC, géneros y más metadatos de tus canciones directamente desde el editor de Addictiva Records."
+---
+
+Los metadatos de tus canciones son mucho más que simples etiquetas: son la información que determina cómo tu música es descubierta en las plataformas de streaming, cómo se acreditan correctamente los créditos creativos y cómo se liquidan los derechos de autor y las regalías. Completar los metadatos de manera precisa y completa es uno de los pasos más importantes antes de distribuir cualquier lanzamiento. Addictiva Records pone a tu disposición un editor centralizado donde puedes gestionar todos estos campos de forma sencilla.
+
+## Campos de metadatos disponibles
+
+Desde el editor de metadatos de Addictiva Records puedes completar y editar los siguientes campos para cada canción o lanzamiento:
+
+<ParamField body="Título de la canción" type="string" required>
+  El nombre oficial de la canción tal como aparecerá en todas las plataformas de distribución. Debe coincidir exactamente con el título en la portada del lanzamiento.
+</ParamField>
+
+<ParamField body="Nombre del artista principal" type="string" required>
+  El nombre artístico o nombre de la banda bajo el cual se publicará la canción. Este campo es obligatorio y debe estar registrado en tu perfil de Addictiva Records.
+</ParamField>
+
+<ParamField body="Artistas adicionales / Featuring" type="string">
+  Nombres de los artistas que participan en la canción de forma secundaria o en calidad de invitados. Utiliza este campo para colaboraciones y featurings. Separa múltiples artistas con comas.
+</ParamField>
+
+<ParamField body="Nombre del álbum" type="string">
+  El título del álbum o EP al que pertenece esta canción. Si se trata de un single, puedes dejar este campo con el mismo nombre que la canción o dejarlo vacío según corresponda.
+</ParamField>
+
+<ParamField body="Año de lanzamiento" type="number">
+  El año en que el lanzamiento fue o será publicado oficialmente. Este dato aparece en los metadatos embebidos del archivo y en las fichas de las plataformas.
+</ParamField>
+
+<ParamField body="Género y subgénero" type="string">
+  Selecciona el género musical principal y, de forma opcional, un subgénero que describa mejor el estilo de la canción. Una clasificación precisa mejora la visibilidad en listas algorítmicas y editoriales.
+</ParamField>
+
+<ParamField body="ISRC" type="string">
+  El código ISRC (International Standard Recording Code) es un identificador único e internacional para cada grabación. Si ya dispones de uno, introdúcelo aquí. Si no, Addictiva Records te asignará uno automáticamente.
+</ParamField>
+
+<ParamField body="UPC / EAN" type="string">
+  El código de barras universal del producto (UPC) o su equivalente europeo (EAN) identifica el lanzamiento completo (álbum, EP o single). Es necesario para la distribución en tiendas digitales.
+</ParamField>
+
+<ParamField body="Compositores y letristas" type="string">
+  Los nombres completos (nombre legal) de todas las personas que compusieron la música y/o escribieron la letra. Esta información es fundamental para la correcta gestión de derechos de autor y el cobro de regalías de publicación.
+</ParamField>
+
+<ParamField body="Productores" type="string">
+  El nombre o los nombres de los productores musicales que trabajaron en la grabación. Algunos servicios de streaming muestran esta información en los créditos de la canción.
+</ParamField>
+
+<ParamField body="Sello discográfico" type="string">
+  El nombre del sello o label bajo el cual se distribuye el lanzamiento. Si eres artista independiente, puedes usar tu nombre artístico o el nombre de tu proyecto como sello.
+</ParamField>
+
+<ParamField body="Idioma de la letra" type="string">
+  El idioma principal en el que está escrita la letra de la canción. Utiliza el estándar ISO 639-1 (por ejemplo: `es` para español, `en` para inglés).
+</ParamField>
+
+<ParamField body="Letra (Lyrics)" type="string">
+  El texto completo de la letra de la canción. Añadir la letra mejora la experiencia del oyente en plataformas como Spotify y Apple Music, y puede aumentar el alcance orgánico de tu música.
+</ParamField>
+
+<ParamField body="Clasificación de contenido explícito" type="boolean">
+  Indica si la canción contiene lenguaje explícito o contenido para adultos. Marcar correctamente este campo es obligatorio en la mayoría de las plataformas de distribución.
+</ParamField>
+
+<Info>
+  Si no dispones de un código ISRC propio, **Addictiva Records te asignará uno automáticamente** en el momento de enviar tu lanzamiento a distribución. Este código quedará asociado permanentemente a esa grabación y podrás consultarlo en el panel de detalles de la canción una vez procesado.
+</Info>
+
+## Preguntas frecuentes sobre metadatos
+
+<Accordion title="¿Qué es un código ISRC y por qué lo necesito?">
+  El **ISRC (International Standard Recording Code)** es el estándar internacional para identificar de forma única cada grabación musical. Se compone de 12 caracteres que incluyen el código de país, el código del registrante, el año y un número de secuencia (por ejemplo: `ES-A12-24-00001`).
+
+  Necesitas un código ISRC porque:
+
+  - Permite a las plataformas de streaming rastrear exactamente cuántas reproducciones recibe tu canción, independientemente del nombre del artista o del título.
+  - Es imprescindible para que las sociedades de gestión de derechos (como SGAE, ASCAP o SOCAN) puedan identificar tus grabaciones y liquidarte las regalías correspondientes.
+  - Evita duplicados y confusiones cuando una misma canción aparece en múltiples lanzamientos o plataformas.
+
+  Si ya tienes ISRCs asignados por tu sociedad de gestión o por una distribuidora anterior, introdúcelos manualmente en el campo correspondiente. Si no, Addictiva Records los generará automáticamente sin coste adicional.
+</Accordion>
+
+<Accordion title="¿Puedo editar los metadatos después de distribuir?">
+  Sí, puedes editar la mayoría de los metadatos después de que tu música haya sido distribuida, pero hay algunas consideraciones importantes:
+
+  - **Campos editables en cualquier momento:** letra, productores, artistas adicionales, idioma de la letra y clasificación de contenido explícito.
+  - **Campos que requieren actualización en plataformas:** cambios en el título, nombre del artista principal, género o año de lanzamiento deben propagarse a cada plataforma, lo que puede tardar entre **3 y 10 días hábiles** según la tienda.
+  - **Campos no editables tras la distribución:** el código ISRC y el UPC/EAN son identificadores permanentes y no pueden modificarse una vez asignados.
+
+  Para editar los metadatos de una canción ya distribuida, ve a **Mi Música**, selecciona la canción y haz clic en **Editar metadatos**. Los cambios se enviarán automáticamente a todas las plataformas donde esté publicada.
+</Accordion>
