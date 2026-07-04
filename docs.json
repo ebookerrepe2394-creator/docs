@@ -64,7 +64,8 @@
               "analytics/dashboard",
               "analytics/streams",
               "analytics/revenue"
-            ]
+            ],
+            "icon": "alt"
           },
           {
             "group": "Ayuda",
