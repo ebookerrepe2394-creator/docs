@@ -71,6 +71,15 @@
             "pages": ["help/faq", "help/troubleshooting"]
           }
         ]
+      },
+      {
+        "tab": "Novedades",
+        "groups": [
+          {
+            "group": "Changelog",
+            "pages": ["changelog/overview"]
+          }
+        ]
       }
     ]
   },
