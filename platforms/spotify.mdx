@@ -1,47 +1,90 @@
 ---
-title: "Conecta tu Cuenta de Spotify for Artists a Addictiva Records"
+title: "Conecta tu cuenta de Spotify a Addictiva Records"
 sidebarTitle: "Spotify"
-description: "Vincula Spotify for Artists con Addictiva Records para ver tus streams, oyentes mensuales y estadísticas de perfil directamente en tu dashboard."
+description: "Vincula Spotify a Addictiva Records vía OAuth 2.0 para ver streams, analíticas de oyentes y posicionamiento en playlists desde tu panel."
 ---
 
-Spotify es la plataforma de streaming más grande del mundo y una fuente clave de datos para cualquier artista. Al conectar tu cuenta de **Spotify for Artists** con Addictiva Records, puedes consultar tus métricas de rendimiento — streams, oyentes mensuales, colocaciones en playlists y seguidores — sin salir de tu panel central. La conexión se realiza de forma segura a través del protocolo OAuth 2.0, de modo que nunca necesitas compartir tu contraseña de Spotify con Addictiva Records.
+Spotify es una de las plataformas de streaming más importantes del mundo y conectarla a Addictiva Records te da acceso a todas tus estadísticas en tiempo real sin salir de tu panel. La integración se realiza mediante OAuth 2.0, el estándar más seguro de autorización: en ningún momento compartirás tu contraseña con Addictiva Records. Una vez conectada la cuenta, podrás ver el rendimiento de cada canción, conocer de dónde vienen tus oyentes y rastrear en qué listas de reproducción aparece tu música.
 
-## Cómo conectar Spotify
+## Cómo conectar tu cuenta de Spotify
 
 <Steps>
-  <Step title="Accede a tu Dashboard de Addictiva Records">
-    Inicia sesión en tu cuenta de Addictiva Records y dirígete al menú lateral. Haz clic en **Plataformas** para abrir el centro de conexiones.
+  <Step title="Ir a Configuración > Plataformas">
+    Dentro de tu panel de Addictiva Records, dirígete al menú lateral y selecciona **Configuración**. Luego haz clic en la sección **Plataformas** para ver todas las integraciones disponibles.
   </Step>
-  <Step title="Selecciona Spotify">
-    Dentro de la sección Plataformas, localiza la tarjeta de **Spotify** y haz clic en **Conectar**.
+  <Step title="Clic en 'Conectar Spotify'">
+    Localiza la tarjeta de **Spotify** en la lista de plataformas y haz clic en el botón **Conectar Spotify**. El sistema iniciará el flujo de autenticación OAuth 2.0.
   </Step>
-  <Step title="Autoriza con Spotify for Artists">
-    Serás redirigido a la página oficial de Spotify. Inicia sesión con las credenciales de tu cuenta de **Spotify for Artists** y acepta los permisos que solicita Addictiva Records. Una vez autorizado, serás devuelto automáticamente a tu dashboard.
+  <Step title="Iniciar sesión en Spotify">
+    Serás redirigido automáticamente a la página oficial de inicio de sesión de Spotify. Ingresa tu correo y contraseña de Spotify directamente en ese sitio; Addictiva Records no tiene acceso a estos datos.
   </Step>
-  <Step title="Confirma la conexión">
-    En la tarjeta de Spotify verás el estado cambiado a **Conectado** junto con el nombre de tu perfil artístico. Los datos comenzarán a sincronizarse en los próximos minutos.
+  <Step title="Aceptar los permisos solicitados">
+    Spotify te mostrará una pantalla con los permisos que Addictiva Records necesita para funcionar. Revisa la lista y haz clic en **Aceptar** para autorizar la integración.
+  </Step>
+  <Step title="Regresar al dashboard conectado">
+    Una vez aceptados los permisos, serás redirigido de vuelta a tu panel de Addictiva Records. Verás la tarjeta de Spotify marcada como **Conectado** y tus datos comenzarán a sincronizarse en los próximos minutos.
   </Step>
 </Steps>
 
-## Datos que se sincronizan
+## Qué puedes hacer después de conectar
 
-Una vez conectada tu cuenta, Addictiva Records importa y actualiza periódicamente las siguientes métricas desde Spotify for Artists:
+Al tener Spotify vinculado a tu panel, tendrás acceso a las siguientes funciones:
 
-- **Streams totales** — número acumulado de reproducciones de todas tus canciones.
-- **Oyentes mensuales** — audiencia única que te escuchó en los últimos 28 días.
-- **Colocaciones en playlists** — playlists editoriales y algorítmicas donde aparecen tus canciones.
-- **Seguidores** — total de usuarios que siguen tu perfil de artista en Spotify.
+<CardGroup cols={2}>
+  <Card title="Distribución de música" icon="upload">
+    Envía tus lanzamientos directamente a Spotify desde Addictiva Records sin necesidad de entrar a otra plataforma.
+  </Card>
+  <Card title="Conteo de streams por canción" icon="chart-bar">
+    Consulta cuántas veces se ha reproducido cada track y compara el rendimiento entre lanzamientos.
+  </Card>
+  <Card title="Demografía de oyentes" icon="users">
+    Descubre la edad, género y ubicación geográfica de las personas que escuchan tu música en Spotify.
+  </Card>
+  <Card title="Posicionamiento en playlists" icon="list-music">
+    Monitorea en qué listas de reproducción —editoriales o de usuarios— aparece tu música y cuántos streams generan.
+  </Card>
+</CardGroup>
 
-<Note>
-  La publicación de nuevos lanzamientos en Spotify no se realiza directamente desde la integración de Spotify. Para distribuir música a Spotify, utiliza la integración con **DistroKid** o **TuneCore** disponibles en Addictiva Records. Una vez distribuida, las estadísticas de esas canciones aparecerán automáticamente en tu sección de Spotify.
-</Note>
+## Permisos que Addictiva Records solicita a Spotify
 
-## Preguntas frecuentes
+Durante el proceso de autorización, Addictiva Records solicita únicamente los permisos necesarios para ofrecerte las funciones de analíticas y distribución:
 
-<Accordion title="¿Qué permisos solicita Addictiva Records a Spotify?">
-  Addictiva Records solicita únicamente permisos de **lectura** a través de la API de Spotify for Artists. Esto incluye acceso a estadísticas de streams, datos de oyentes, información de playlists y métricas de perfil. No se solicitan permisos para modificar tu perfil, subir contenido ni gestionar tu biblioteca personal de Spotify. Puedes revisar y revocar estos permisos en cualquier momento desde **Configuración de tu cuenta de Spotify → Aplicaciones**.
+<Accordion title="Ver permisos detallados">
+  - **Lectura de perfil público**: accede a tu nombre de artista, foto y enlace de perfil para mostrarlos en el panel.
+  - **Acceso a estadísticas de streaming**: lee los datos de reproducciones, oyentes únicos y seguidores de tu perfil de artista.
+  - **Lectura de listas de reproducción**: identifica en qué playlists está incluida tu música para el seguimiento de posicionamiento.
+  - **Gestión de catálogo (distribución)**: permite enviar y actualizar lanzamientos en tu perfil de artista de Spotify.
+
+  Addictiva Records **no solicita** permisos para reproducir música en tu nombre, acceder a tu biblioteca personal ni gestionar tu cuenta de suscripción.
 </Accordion>
 
-<Accordion title="¿Con qué frecuencia se actualizan los datos?">
-  Los datos de Spotify se sincronizan automáticamente **cada 24 horas**. Ten en cuenta que Spotify for Artists tiene su propio ciclo de actualización de métricas (generalmente con un retraso de 2 a 3 días para datos de streams detallados), por lo que es posible que los números más recientes no estén disponibles de inmediato. Puedes forzar una sincronización manual en cualquier momento haciendo clic en el botón **Actualizar datos** dentro de la tarjeta de Spotify en tu panel.
-</Accordion>
+<Tip>
+  Spotify for Artists y Addictiva Records se complementan muy bien. Usa Spotify for Artists para gestionar tu imagen de perfil, cabeceras y el orden de canciones destacadas; usa Addictiva Records para el análisis comparativo entre todas tus plataformas y para centralizar tu estrategia de distribución.
+</Tip>
+
+## Cómo desconectar tu cuenta de Spotify
+
+Si en algún momento deseas desvincular Spotify de Addictiva Records, puedes hacerlo desde dos lugares:
+
+<Tabs>
+  <Tab title="Desde Addictiva Records">
+    1. Ve a **Configuración > Plataformas**.
+    2. Haz clic en la tarjeta de **Spotify**.
+    3. Selecciona **Desconectar cuenta**.
+    4. Confirma la acción en el cuadro de diálogo que aparece.
+
+    La desconexión es inmediata y Addictiva Records dejará de acceder a tus datos de Spotify.
+  </Tab>
+  <Tab title="Desde Spotify">
+    Para revocar el acceso directamente desde tu cuenta de Spotify:
+    1. Inicia sesión en [spotify.com](https://www.spotify.com) y ve a **Cuenta > Aplicaciones**.
+    2. Busca **Addictiva Records** en la lista de aplicaciones autorizadas.
+    3. Haz clic en **Eliminar acceso**.
+
+    Esto revoca el token de autenticación aunque no hayas desconectado desde el panel de Addictiva Records. Ambos pasos son equivalentes; hacerlo desde una sola parte es suficiente.
+  </Tab>
+</Tabs>
+
+<Warning>
+  Al desconectar tu cuenta de Spotify, **se eliminará todo el historial de analíticas de Spotify almacenado en tu panel de Addictiva Records**, incluyendo datos históricos de streams, demografía de oyentes y registros de posicionamiento en playlists. Esta acción no se puede deshacer. Si solo necesitas pausar la sincronización temporalmente, considera deshabilitar la integración en lugar de desconectarla por completo.
+</Warning>

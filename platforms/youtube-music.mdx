@@ -1,51 +1,70 @@
 ---
-title: "Conecta YouTube Music y YouTube Studio a Addictiva Records"
+title: "Integra YouTube Music con Addictiva Records"
 sidebarTitle: "YouTube Music"
-description: "Vincula tu canal de YouTube con Addictiva Records para rastrear reproducciones, suscriptores y ganancias de YouTube Music desde tu dashboard central."
+description: "Conecta YouTube Music a Addictiva Records vía OAuth 2.0 y accede a streams de video y audio, ingresos de Content ID y crecimiento de suscriptores."
 ---
 
-YouTube es simultáneamente la plataforma de video más grande del mundo y uno de los servicios de streaming musical más utilizados a través de YouTube Music. Al conectar tu canal de YouTube con Addictiva Records mediante Google OAuth, podrás monitorear vistas, tiempo de visualización, suscriptores, streams en YouTube Music y ganancias generadas por tu contenido, todo desde tu panel central sin tener que abrir YouTube Studio por separado.
+YouTube Music es mucho más que una plataforma de audio: es también el ecosistema de video musical más grande del mundo, y a través de YouTube Content ID puedes monetizar tu música cada vez que alguien la use en un video. Al integrar YouTube Music con Addictiva Records mediante OAuth 2.0, centralizas en un solo panel tanto las estadísticas de audio de YouTube Music como las del canal de YouTube de tu artista, incluyendo los ingresos generados por tu catálogo. Es una de las integraciones más completas disponibles en la plataforma.
 
 ## Cómo conectar YouTube Music
 
 <Steps>
-  <Step title="Accede a la sección de Plataformas">
-    Inicia sesión en Addictiva Records y haz clic en **Plataformas** en el menú lateral. Localiza la tarjeta de **YouTube Music** y haz clic en **Conectar**.
+  <Step title="Ir a Configuración > Plataformas">
+    Dentro de tu panel de Addictiva Records, selecciona **Configuración** en el menú lateral y luego haz clic en **Plataformas** para acceder al listado de integraciones disponibles.
   </Step>
-  <Step title="Inicia sesión con tu cuenta de Google">
-    Serás redirigido a la pantalla de autorización de Google. Inicia sesión con la cuenta de Google propietaria del canal de YouTube que deseas conectar.
+  <Step title="Clic en 'Conectar YouTube Music'">
+    Localiza la tarjeta de **YouTube Music** y haz clic en el botón **Conectar YouTube Music**. Addictiva Records iniciará el flujo de autenticación OAuth 2.0 con Google.
   </Step>
-  <Step title="Autoriza los permisos de YouTube">
-    Google te mostrará los permisos que solicita Addictiva Records. Revísalos y haz clic en **Permitir** para otorgar el acceso. La autorización utiliza el protocolo OAuth 2.0, por lo que tus credenciales de Google nunca son compartidas con Addictiva Records.
+  <Step title="Iniciar sesión con tu cuenta de Google">
+    Serás redirigido a la página oficial de inicio de sesión de Google. Inicia sesión con la cuenta asociada a tu canal de artista en YouTube. Addictiva Records nunca ve ni almacena tus credenciales de Google.
   </Step>
-  <Step title="Selecciona tu canal">
-    Si tu cuenta de Google tiene asociados varios canales de YouTube, Addictiva Records te pedirá que selecciones cuál deseas vincular. Elige el canal artístico principal y confirma la selección.
+  <Step title="Seleccionar el canal de artista correcto">
+    Si tienes más de un canal de YouTube vinculado a tu cuenta de Google, se te mostrará una lista para que elijas cuál conectar. Selecciona el canal oficial de tu artista.
   </Step>
-  <Step title="Verifica la conexión">
-    Regresarás automáticamente a tu dashboard. La tarjeta de YouTube Music mostrará el estado **Conectado** junto con el nombre y la foto de tu canal. Los datos comenzarán a sincronizarse en breve.
+  <Step title="Aceptar los permisos solicitados">
+    Google te mostrará una pantalla con los permisos que Addictiva Records necesita. Revísalos y haz clic en **Permitir** para completar la autorización.
+  </Step>
+  <Step title="Regresar al dashboard conectado">
+    Una vez autorizado, serás redirigido de vuelta a Addictiva Records. La tarjeta de YouTube Music aparecerá como **Conectado** y la sincronización inicial comenzará en breve.
   </Step>
 </Steps>
 
-## Datos que se sincronizan
+## Qué puedes ver después de conectar
 
-Una vez establecida la conexión, Addictiva Records importa las siguientes métricas desde YouTube Studio y YouTube Music:
+<CardGroup cols={2}>
+  <Card title="Streams de video" icon="video">
+    Número total de reproducciones de tus videos musicales oficiales en YouTube.
+  </Card>
+  <Card title="Streams de audio" icon="music">
+    Reproducciones de tus canciones en el formato de audio de YouTube Music.
+  </Card>
+  <Card title="Ingresos de Content ID" icon="circle-dollar-to-slot">
+    Monitorea los ingresos generados cuando terceros usan tu música en sus videos y YouTube la identifica automáticamente.
+  </Card>
+  <Card title="Crecimiento de suscriptores" icon="users-plus">
+    Sigue la evolución del número de suscriptores de tu canal de artista a lo largo del tiempo.
+  </Card>
+</CardGroup>
 
-- **Vistas totales** — reproducciones acumuladas de todos los videos de tu canal.
-- **Tiempo de visualización** — horas totales que los usuarios han visto tu contenido.
-- **Suscriptores** — total actual y evolución de los suscriptores de tu canal.
-- **Streams en YouTube Music** — reproducciones de tus canciones específicamente dentro de la app de YouTube Music.
-- **Ingresos estimados** — ganancias por publicidad y participación en YouTube Premium, en los canales monetizados.
+<Note>
+  Al conectar YouTube Music, Addictiva Records vincula **simultáneamente** tu perfil de YouTube Music y tu canal de YouTube. No necesitas hacer dos conexiones separadas. Todos los datos de audio y video quedan disponibles en un solo panel consolidado, lo que te permite comparar el rendimiento entre ambos formatos sin esfuerzo adicional.
+</Note>
 
-<Info>
-  La distribución de tu música a **YouTube Music** y la gestión de **Content ID** no se realiza directamente desde la integración de YouTube en Addictiva Records. Para que tus canciones estén disponibles en YouTube Music y para proteger tu contenido con Content ID, utiliza la integración con **DistroKid** o **TuneCore** desde el mismo panel. Una vez que tus lanzamientos estén distribuidos, sus streams en YouTube Music aparecerán automáticamente en tu sección de estadísticas de YouTube.
-</Info>
+## YouTube Content ID y Addictiva Records
 
-## Preguntas frecuentes
+YouTube Content ID es el sistema de Google que detecta automáticamente cuándo alguien utiliza tu música en un video de YouTube, incluso sin que tú lo subas. Addictiva Records se integra con este sistema para ayudarte a reclamar y monetizar ese contenido.
 
-<Accordion title="¿Puedo conectar varios canales de YouTube?">
-  Actualmente, Addictiva Records permite conectar **un canal de YouTube por cuenta de artista**. Si necesitas monitorear múltiples canales (por ejemplo, un canal principal y un canal de contenido detrás de escenas), deberás elegir cuál es el prioritario para la sincronización de estadísticas. Si en el futuro necesitas cambiar el canal conectado, ve a **Plataformas → YouTube Music**, desconecta el canal actual y vuelve a realizar el proceso de autorización con el canal deseado.
+<Accordion title="¿Cómo funciona la reclamación de música con Content ID?">
+  Cuando distribuyes tu música a YouTube a través de Addictiva Records, tu catálogo queda registrado en el sistema de Content ID de YouTube. A partir de ese momento:
+
+  1. **Detección automática**: YouTube escanea todos los videos subidos a la plataforma en busca de coincidencias con tu música.
+  2. **Reclamación**: Cuando se detecta una coincidencia, Addictiva Records puede reclamar automáticamente el video en tu nombre, lo que activa la monetización.
+  3. **Distribución de ingresos**: Los ingresos publicitarios del video reclamado se depositan en tu cuenta de Addictiva Records según el porcentaje configurado.
+  4. **Panel de seguimiento**: Desde tu panel puedes ver todos los videos reclamados, los ingresos generados y el estado de cada reclamación.
+
+  Ten en cuenta que la elegibilidad para Content ID depende de los derechos que hayas registrado en tu distribuidor. Consulta la sección de **Derechos y Licencias** para más información.
 </Accordion>
 
-<Accordion title="¿Qué pasa con los ingresos de YouTube Premium?">
-  Los ingresos generados por suscriptores de **YouTube Premium** que escuchan tu música están incluidos en las métricas de ingresos estimados que Addictiva Records importa desde YouTube Studio. Estos ingresos representan tu participación en el fondo de distribución de YouTube Premium, que se calcula en función del tiempo de visualización de tus videos por parte de los usuarios Premium. Ten en cuenta que YouTube reporta los ingresos con un retraso de aproximadamente 30 días, por lo que los montos más recientes pueden no reflejarse de inmediato en tu panel.
-</Accordion>
+<Tip>
+  Mantén tu canal de YouTube actualizado con arte de portada, descripción del artista y secciones organizadas. YouTube Music prioriza artistas con perfiles completos en su algoritmo de recomendación, lo que puede aumentar significativamente tus streams orgánicos.
+</Tip>

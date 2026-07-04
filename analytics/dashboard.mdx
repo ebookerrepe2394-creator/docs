@@ -1,78 +1,74 @@
 ---
-title: "Panel de Analíticas: Todas tus Estadísticas en un Lugar"
+title: "Panel de analíticas unificado de Addictiva Records"
 sidebarTitle: "Dashboard"
-description: "El dashboard de analíticas de Addictiva Records unifica streams, oyentes, ganancias y demografía de Spotify, Apple Music, YouTube y más en tiempo real."
+description: "Visualiza streams, ingresos y datos de oyentes de todas tus plataformas de distribución en un solo lugar con Addictiva Records."
 ---
 
-El dashboard de analíticas de **Addictiva Records** es tu centro de mando musical: un único lugar donde convergen todas las métricas de tus canciones, álbumes y perfiles de artista sin importar en cuántas plataformas estés distribuido. En lugar de iniciar sesión por separado en Spotify for Artists, Apple Music for Artists, YouTube Studio y cada distribuidor, aquí encuentras todo consolidado, actualizado y listo para tomar decisiones que impulsen tu carrera.
+El panel de analíticas de Addictiva Records centraliza toda la información de tus plataformas de distribución conectadas — Spotify, Apple Music, YouTube Music, SoundCloud y más — en una vista unificada. Desde aquí puedes monitorear el rendimiento de tu música, identificar tendencias y tomar decisiones informadas sin tener que saltar entre aplicaciones.
 
-## Secciones del dashboard
+## Secciones principales del panel
 
-El panel principal está organizado en widgets diseñados para darte una visión completa de tu rendimiento de un solo vistazo. A continuación te explicamos qué encontrarás en cada sección.
-
-### Resumen general
-
-El widget de resumen te muestra los números más importantes del periodo seleccionado:
-
-- **Streams totales** — suma de todas las reproducciones en cada plataforma conectada.
-- **Oyentes únicos** — cantidad de usuarios distintos que escucharon al menos una de tus canciones.
-- **Ganancias del mes** — ingresos confirmados y pendientes generados durante el mes en curso.
-
-### Desglose por plataforma
-
-Compara tu rendimiento entre Spotify, Apple Music, YouTube Music, Deezer, Tidal y el resto de plataformas conectadas en una sola gráfica de barras o de pastel. Identifica en cuál plataforma tienes mayor tracción y enfoca tu estrategia de promoción donde el retorno es más alto.
-
-### Mapa de oyentes por país
-
-Visualiza geográficamente dónde se encuentra tu audiencia. El mapa de calor te permite detectar mercados inesperados, planificar giras o ajustar tus campañas de publicidad por región.
-
-### Canciones más escuchadas
-
-Un ranking dinámico de tus tracks con mayor número de reproducciones en el periodo elegido. Puedes ordenar por streams totales, oyentes únicos o crecimiento porcentual respecto al periodo anterior.
-
-### Evolución temporal
-
-Selecciona la ventana de tiempo que más te interese — **últimos 7 días**, **últimos 30 días** o **últimos 90 días** — para visualizar la curva de crecimiento de tus streams, oyentes y ganancias. Las líneas de tendencia te ayudan a identificar picos relacionados con lanzamientos, campañas o apariciones en playlists editoriales.
-
----
-
-## Explora en profundidad
-
-Desde el dashboard general puedes acceder a las secciones de analíticas detalladas para streams e ingresos:
+Las cuatro tarjetas de resumen en la parte superior del dashboard te dan una fotografía instantánea de tu actividad musical en el período seleccionado.
 
 <CardGroup cols={2}>
-  <Card title="Reproducciones" icon="chart-line" href="/analytics/streams">
-    Analiza streams totales, oyentes únicos, fuentes de descubrimiento y rendimiento en playlists por plataforma y por canción.
+  <Card title="Streams totales" icon="play">
+    Muestra el número total de reproducciones acumuladas en todas tus plataformas conectadas durante el período seleccionado. Haz clic en la tarjeta para ver el desglose por plataforma.
   </Card>
-  <Card title="Ingresos" icon="circle-dollar-to-slot" href="/analytics/revenue">
-    Consulta tus regalías desglosadas por plataforma, distribuidor, canción y país, y lleva el control de tus pagos.
+  <Card title="Oyentes únicos" icon="users">
+    Refleja cuántas personas distintas han escuchado tu música este mes en comparación con el mes anterior. Un incremento positivo aparece en verde; una caída, en rojo.
+  </Card>
+  <Card title="Ingresos del mes" icon="circle-dollar-sign">
+    Total de regalías generadas en el mes en curso, expresadas en USD. Este valor se actualiza conforme las plataformas reportan sus datos a Addictiva Records.
+  </Card>
+  <Card title="Top canción" icon="trophy">
+    La pista con mayor número de reproducciones en el período activo. Haz clic para ir directamente al análisis detallado de esa canción en la sección de Streams.
   </Card>
 </CardGroup>
 
----
+## Filtros de rango de fechas
 
-## Frecuencia de actualización de datos
+Puedes ajustar el período que muestra todo el dashboard usando el selector de fechas ubicado en la esquina superior derecha del panel. Las opciones disponibles son:
 
-<Info>
-  La velocidad con la que se actualizan tus estadísticas depende de cada plataforma y de su política de reporte:
+- **Hoy** — datos de las últimas 24 horas
+- **Esta semana** — lunes al día actual
+- **Este mes** — del 1 al día actual del mes en curso
+- **Últimos 3 meses** — trimestre móvil
+- **Últimos 12 meses** — año móvil completo
+- **Personalizado** — elige cualquier rango de inicio y fin con el calendario desplegable
 
-  - **Spotify** — se actualiza diariamente, con un retraso aproximado de 24 h.
-  - **Apple Music** — se actualiza semanalmente; los datos aparecen cada lunes.
-  - **YouTube Music / YouTube** — se actualiza diariamente para vistas, con retrasos de hasta 48 h en métricas de retención.
-  - **Deezer / Tidal / Amazon Music** — actualizaciones semanales o quincenales según la plataforma.
-  - **Distribuidores (DistroKid, TuneCore, etc.)** — los estados de cuenta de regalías pueden tardar entre 30 y 90 días en reflejarse.
+Al cambiar el rango, todas las tarjetas, gráficas y tablas del dashboard se actualizan automáticamente.
 
-  Addictiva Records sincroniza los datos en cuanto cada plataforma los pone a disposición. Si notas un retraso inusual, puedes forzar una sincronización manual desde **Configuración → Plataformas conectadas**.
-</Info>
+## Desglose por plataforma
 
----
+De forma predeterminada el dashboard agrega los datos de todas tus plataformas conectadas. Para analizar una plataforma específica:
 
-## Preguntas frecuentes
+1. Localiza el menú desplegable **"Plataforma"** justo debajo del selector de fechas.
+2. Selecciona **"Todas las plataformas"** para la vista consolidada, o elige una plataforma individual (por ejemplo, *Spotify* o *Apple Music*).
+3. El panel completo, incluyendo la gráfica de tendencias y la tabla de canciones, se filtrará para mostrar únicamente los datos de esa plataforma.
 
-<Accordion title="¿Puedo forzar una sincronización manual de datos?">
-  Sí. Si crees que tus estadísticas no se han actualizado dentro del plazo esperado para una plataforma, puedes iniciar una sincronización manual desde **Configuración → Plataformas conectadas**: localiza la plataforma en cuestión y haz clic en **Sincronizar ahora**. Ten en cuenta que esto solo acelera la importación de datos que la plataforma ya haya publicado; no puede traer información que la plataforma aún no haya liberado según su propio ciclo de reporte. Addictiva Records también te enviará una notificación en el panel cuando detecte que una plataforma lleva más de 48 horas sin enviar nuevos datos.
-</Accordion>
+Puedes alternar entre plataformas en cualquier momento sin perder el rango de fechas que tengas activo.
 
-<Accordion title="¿Puedo exportar mis analíticas?">
-  Sí. En cualquier widget del dashboard encontrarás el ícono de descarga (↓) en la esquina superior derecha. Puedes exportar los datos en formato **CSV** para procesarlos en Excel o Google Sheets, o en **PDF** para incluirlos en reportes o presentaciones. También puedes programar exportaciones automáticas semanales o mensuales desde **Configuración → Exportaciones**.
-</Accordion>
+## Mapa geográfico de oyentes
+
+La sección **"Tu audiencia en el mundo"** muestra un mapa de calor interactivo con los países y ciudades donde más se escucha tu música. Pasa el cursor sobre cualquier país para ver el número de streams y oyentes únicos de esa región. Haz clic en un país para profundizar y ver el desglose por ciudad.
+
+Esta información es especialmente útil para planificar giras, lanzar campañas publicitarias segmentadas o entender en qué mercados tiene más tracción tu propuesta musical.
+
+<Note>
+  Los datos del dashboard se actualizan cada **24 horas**. Algunas plataformas, como YouTube Music y SoundCloud, pueden presentar retrasos de hasta **48 horas** en sus reportes. Si acabas de distribuir o recibiste una notable cantidad de streams, espera al menos un día antes de verificar los cambios reflejados.
+</Note>
+
+## Exportar datos del dashboard
+
+Puedes descargar un reporte completo del período visualizado en formato **CSV** o **Excel (.xlsx)**:
+
+1. Asegúrate de tener activo el rango de fechas y el filtro de plataforma que deseas exportar.
+2. Haz clic en el botón **"Exportar"** (ícono de descarga) ubicado en la esquina superior derecha.
+3. Selecciona el formato deseado: **CSV** o **Excel**.
+4. El archivo se descargará automáticamente a tu carpeta de descargas.
+
+El reporte incluye todas las métricas visibles en el dashboard: streams, oyentes únicos, ingresos estimados y datos geográficos.
+
+<Tip>
+  Usa el selector de fechas en modo **"Personalizado"** para comparar períodos equivalentes — por ejemplo, del 1 al 31 de enero frente al 1 al 28 de febrero — y mide con precisión el crecimiento mes a mes de tus reproducciones e ingresos. Esta comparación manual te da más contexto que los porcentajes de variación automáticos.
+</Tip>

@@ -1,52 +1,67 @@
 ---
-title: "Distribuye con TuneCore a Través de Addictiva Records"
+title: "Integra TuneCore con tu panel de Addictiva Records"
 sidebarTitle: "TuneCore"
-description: "Vincula TuneCore con Addictiva Records para enviar álbumes, singles y EPs a más de 150 plataformas y hacer seguimiento de tus regalías desde el dashboard."
+description: "Conecta TuneCore a Addictiva Records con tu API Key para gestionar distribución, ver reportes por tienda y consultar resúmenes de regalías en un solo panel."
 ---
 
-TuneCore es una distribuidora digital líder que destaca por devolver el 100% de las regalías al artista, sin comisiones por ventas ni streaming. Al conectar tu cuenta de TuneCore con Addictiva Records, puedes gestionar todo tu catálogo de lanzamientos, monitorear el estado de distribución en cada plataforma y revisar tus reportes de regalías desde un único panel, sin necesidad de acceder al sitio de TuneCore por separado.
+TuneCore es un servicio de distribución digital que te permite llevar tu música a cientos de tiendas y plataformas en todo el mundo, con la ventaja de recibir el 100% de las regalías generadas. Al integrarlo con Addictiva Records mediante tu API Key, puedes gestionar tus distribuciones, consultar reportes de ventas por tienda y revisar resúmenes de regalías sin salir de tu panel centralizado. Es una combinación poderosa para artistas que quieren tener control total sobre su música y sus ingresos desde un solo lugar.
 
-## Cómo conectar TuneCore
+## Cómo conectar tu cuenta de TuneCore
 
 <Steps>
-  <Step title="Obtén tus credenciales de API de TuneCore">
-    Inicia sesión en tu cuenta de TuneCore y accede a **Configuración → Acceso API**. Genera un nuevo par de credenciales (Client ID y Client Secret) para la integración con Addictiva Records. Guárdalas en un lugar seguro.
+  <Step title="Ingresar a tu cuenta de TuneCore">
+    Abre tu navegador y accede a [tunecore.com](https://www.tunecore.com). Inicia sesión con tu correo y contraseña de TuneCore.
   </Step>
-  <Step title="Accede a la integración en Addictiva Records">
-    En tu dashboard de Addictiva Records, navega a **Plataformas → TuneCore** y haz clic en **Conectar**. Se abrirá el formulario de autenticación por API.
+  <Step title="Ir a Configuración de cuenta > API">
+    Una vez dentro, haz clic en tu nombre o avatar en la esquina superior derecha y selecciona **Configuración de cuenta** o **Account Settings**. Dentro de la configuración, busca la sección **Integraciones** o **API Access** para acceder a la gestión de claves de API.
   </Step>
-  <Step title="Introduce tus credenciales">
-    Ingresa el **Client ID** y el **Client Secret** de TuneCore en los campos correspondientes. Haz clic en **Guardar y verificar** para que Addictiva Records valide las credenciales y establezca la conexión.
+  <Step title="Generar o copiar tu API Key">
+    Si no tienes una API Key activa, haz clic en **Generar clave de API** o **Create API Key**. Copia el valor completo en cuanto aparezca en pantalla y guárdalo en un lugar seguro, ya que es posible que no puedas volver a verlo después de cerrar la ventana.
   </Step>
-  <Step title="Sincroniza tu catálogo">
-    Tras la verificación exitosa, Addictiva Records importará automáticamente tu catálogo completo de TuneCore, incluyendo lanzamientos activos, estado de distribución por plataforma y los reportes de regalías disponibles. La importación inicial puede tardar entre 10 y 20 minutos.
+  <Step title="Ir a Configuración > Plataformas > TuneCore en Addictiva Records">
+    Regresa a tu panel de Addictiva Records, navega a **Configuración** en el menú lateral y selecciona **Plataformas**. Localiza la tarjeta de **TuneCore** y haz clic sobre ella para abrir el formulario de conexión.
+  </Step>
+  <Step title="Pegar la API Key y guardar">
+    En el campo **API Key**, pega la clave copiada desde TuneCore. Confirma que no tenga espacios extras y haz clic en **Guardar**. Addictiva Records verificará la clave automáticamente; si es válida, la tarjeta de TuneCore aparecerá como **Conectado** en pocos segundos.
   </Step>
 </Steps>
 
-## Datos y funcionalidades que se sincronizan
+## Qué puedes hacer después de conectar
 
-Con la integración de TuneCore activa, Addictiva Records pone a tu disposición lo siguiente:
+<CardGroup cols={2}>
+  <Card title="Gestión de distribución" icon="rocket">
+    Inicia el envío de nuevos lanzamientos a las tiendas disponibles en TuneCore directamente desde Addictiva Records.
+  </Card>
+  <Card title="Reportes por tienda" icon="store">
+    Consulta cuántos streams o descargas ha generado cada lanzamiento en cada tienda a la que distribuiste tu música.
+  </Card>
+  <Card title="Resúmenes de regalías" icon="circle-dollar-to-slot">
+    Accede a un resumen consolidado de los ingresos por regalías generados a través de TuneCore, desglosados por período y territorio.
+  </Card>
+  <Card title="Estado de lanzamientos" icon="check-circle">
+    Monitorea el estado de distribución de cada release: en revisión, aprobado, publicado o con incidencias.
+  </Card>
+</CardGroup>
 
-- **Catálogo de lanzamientos** — todos tus singles, EPs y álbumes publicados a través de TuneCore, con sus metadatos y artwork.
-- **Estado de distribución por plataforma** — visualiza si cada lanzamiento está activo, en revisión o pendiente en cada una de las tiendas donde fue enviado.
-- **Reportes de regalías** — accede a los estados de cuenta periódicos de TuneCore con el desglose de ingresos por plataforma, territorio y período.
+<Note>
+  Las tarifas de distribución y los planes de suscripción de TuneCore son **independientes** de tu plan de Addictiva Records. TuneCore cobra por cada lanzamiento o mediante un plan de suscripción según el tipo de cuenta que tengas. Addictiva Records no cubre ni reembolsa estos costos; su función es darte una capa de gestión y visibilidad sobre tu actividad en TuneCore, no reemplazar el servicio en sí.
+</Note>
 
-<Info>
-  TuneCore utiliza un modelo de **precio por lanzamiento**: se cobra una tarifa anual fija por cada single, EP o álbum que distribuyes, independientemente de cuántas plataformas selecciones. A diferencia de otros distribuidores con modelo de suscripción, con TuneCore pagas por mantener activo cada lanzamiento año tras año. Asegúrate de renovar tus lanzamientos dentro del plazo indicado para que no sean retirados de las plataformas. Addictiva Records te mostrará alertas de renovación próxima en la sección de TuneCore de tu panel.
-</Info>
+<Tip>
+  Si distribuyes música en diferentes mercados con distintas estrategias de precio y catálogo, usar **DistroKid y TuneCore simultáneamente** puede ser una buena decisión. Por ejemplo, muchos artistas usan DistroKid para lanzamientos rápidos y de alto volumen (singles, remixes), y TuneCore para álbumes completos donde prefieren un mayor control sobre la distribución por territorio. Con Addictiva Records puedes tener ambas integraciones activas al mismo tiempo y gestionar todo desde un único panel sin necesidad de cambiar de plataforma.
+</Tip>
 
-## Preguntas frecuentes
+## Renovar o cambiar tu API Key de TuneCore
 
-<Accordion title="¿Qué tipos de lanzamientos admite TuneCore?">
-  TuneCore admite tres tipos de lanzamientos musicales, todos gestionables desde Addictiva Records:
+Si necesitas actualizar la API Key porque la anterior expiró o fue comprometida, sigue estos pasos:
 
-  - **Single** — una canción individual o hasta dos pistas (versión principal y bonus track).
-  - **EP** — entre 3 y 6 pistas con una duración total inferior a 30 minutos.
-  - **Álbum** — 7 o más pistas, o cualquier lanzamiento de 30 minutos o más de duración.
+<Accordion title="Pasos para actualizar tu API Key">
+  1. Accede a tu cuenta de TuneCore y genera una nueva API Key desde **Configuración de cuenta > API Access**.
+  2. Copia el nuevo valor de la clave.
+  3. En Addictiva Records, ve a **Configuración > Plataformas > TuneCore**.
+  4. Haz clic en **Editar conexión**.
+  5. Borra la clave anterior y pega la nueva.
+  6. Haz clic en **Guardar y verificar** para confirmar que la nueva clave funciona correctamente.
 
-  Al enviar un nuevo lanzamiento desde Addictiva Records a TuneCore, se te pedirá que selecciones el tipo correcto, ya que afecta directamente la tarifa aplicada y los metadatos requeridos por cada tienda de destino.
-</Accordion>
-
-<Accordion title="¿Con qué frecuencia se actualizan las regalías?">
-  TuneCore publica reportes de regalías con una frecuencia **mensual**, generalmente entre los días 15 y 20 de cada mes para el período anterior. Addictiva Records sincroniza estos reportes automáticamente en cuanto TuneCore los pone a disposición a través de su API, por lo que los verás reflejados en tu panel sin necesidad de realizar ninguna acción manual. Los reportes históricos de períodos anteriores también están disponibles en la sección de **TuneCore → Regalías** de tu dashboard para que puedas revisar la evolución de tus ingresos a lo largo del tiempo.
+  Tus datos históricos ya sincronizados se conservarán durante el proceso de actualización. La sincronización se reanudará automáticamente una vez que la nueva clave sea validada.
 </Accordion>

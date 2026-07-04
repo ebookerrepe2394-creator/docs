@@ -14,10 +14,7 @@
   },
   "navbar": {
     "links": [
-      {
-        "label": "Soporte",
-        "href": "mailto:soporte@adictivarecords.com"
-      }
+      { "label": "Soporte", "href": "mailto:soporte@adictivarecords.com" }
     ],
     "primary": {
       "type": "button",
@@ -32,11 +29,7 @@
         "groups": [
           {
             "group": "Inicio",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "account-setup"
-            ]
+            "pages": ["introduction", "quickstart", "account-setup"]
           },
           {
             "group": "Plataformas",
@@ -51,7 +44,7 @@
             ]
           },
           {
-            "group": "Gestión de Canciones",
+            "group": "Gestión de Música",
             "pages": [
               "music/upload",
               "music/metadata",
@@ -69,10 +62,7 @@
           },
           {
             "group": "Ayuda",
-            "pages": [
-              "help/faq",
-              "help/troubleshooting"
-            ]
+            "pages": ["help/faq", "help/troubleshooting"]
           }
         ]
       }

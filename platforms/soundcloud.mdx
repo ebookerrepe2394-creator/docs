@@ -1,49 +1,76 @@
 ---
-title: "Conecta SoundCloud Pro a tu Panel de Addictiva Records"
+title: "Conecta SoundCloud a tu cuenta de Addictiva Records"
 sidebarTitle: "SoundCloud"
-description: "Integra SoundCloud con Addictiva Records para subir pistas directamente y ver tus plays, likes, reposts y seguidores en un solo lugar."
+description: "Vincula SoundCloud a Addictiva Records vía OAuth 2.0 y monitorea plays, likes, reposts, comentarios y el crecimiento de tus seguidores desde un panel."
 ---
 
-SoundCloud es la plataforma preferida por artistas independientes para compartir música de forma directa con su comunidad. Con la integración de SoundCloud en Addictiva Records, no solo puedes visualizar tus estadísticas de plays, likes, reposts y seguidores en tu panel central, sino también subir nuevas pistas directamente desde Addictiva Records a tu perfil de SoundCloud sin necesidad de abrir la plataforma por separado. La conexión se realiza de forma segura mediante OAuth 2.0.
+SoundCloud es la plataforma favorita de muchos artistas independientes para construir una comunidad desde cero: su audiencia es conocida por ser activa, comprometida y siempre en busca de música nueva. Conectar SoundCloud a Addictiva Records mediante OAuth 2.0 te permite seguir de cerca el comportamiento de esa audiencia —plays, likes, reposts, comentarios y seguidores— junto con el resto de tus plataformas, sin necesidad de revisar cada red por separado. El proceso de conexión es rápido y seguro, ya que tus credenciales nunca abandonan los servidores de SoundCloud.
 
-## Cómo conectar SoundCloud
+## Cómo conectar tu cuenta de SoundCloud
 
 <Steps>
-  <Step title="Ve a la sección de Plataformas">
-    Inicia sesión en tu cuenta de Addictiva Records y navega a **Plataformas** en el menú lateral. Busca la tarjeta de **SoundCloud** y haz clic en **Conectar**.
+  <Step title="Ir a Configuración > Plataformas">
+    Accede a tu panel de Addictiva Records, selecciona **Configuración** en el menú lateral y luego haz clic en **Plataformas**.
   </Step>
-  <Step title="Inicia sesión en SoundCloud">
-    Serás redirigido a la página oficial de SoundCloud. Inicia sesión con las credenciales de tu cuenta (o con Google/Apple si usas ese método de acceso). Asegúrate de iniciar sesión con la cuenta de artista que deseas vincular.
+  <Step title="Clic en 'Conectar SoundCloud'">
+    Localiza la tarjeta de **SoundCloud** en el listado y haz clic en el botón **Conectar SoundCloud** para iniciar el flujo OAuth 2.0.
   </Step>
-  <Step title="Autoriza el acceso a Addictiva Records">
-    SoundCloud te mostrará los permisos que solicita Addictiva Records. Haz clic en **Autorizar** para confirmar la integración. Serás redirigido automáticamente a tu dashboard.
+  <Step title="Iniciar sesión en SoundCloud">
+    Serás redirigido a la página oficial de inicio de sesión de SoundCloud. Ingresa tu correo y contraseña directamente en ese sitio. Addictiva Records no tiene acceso a estas credenciales.
   </Step>
-  <Step title="Confirma la conexión activa">
-    La tarjeta de SoundCloud en tu panel mostrará el estado **Conectado** con el nombre de tu perfil artístico. En pocos minutos, tus estadísticas actuales comenzarán a aparecer en la sección de SoundCloud.
+  <Step title="Aceptar los permisos solicitados">
+    SoundCloud mostrará los permisos que Addictiva Records requiere para acceder a tus estadísticas. Revísalos y haz clic en **Autorizar** para continuar.
+  </Step>
+  <Step title="Regresar al dashboard conectado">
+    Tras la autorización, serás redirigido automáticamente a Addictiva Records. La tarjeta de SoundCloud aparecerá como **Conectado** y los datos comenzarán a sincronizarse en breve.
   </Step>
 </Steps>
 
-## Funcionalidades disponibles
+## Qué puedes ver después de conectar
 
-Con la integración de SoundCloud activa, Addictiva Records te ofrece las siguientes capacidades:
+<CardGroup cols={2}>
+  <Card title="Conteo de plays" icon="play">
+    Total de reproducciones por track para identificar cuáles son tus canciones más populares en SoundCloud.
+  </Card>
+  <Card title="Likes y reposts" icon="heart">
+    Seguimiento de los likes recibidos y la cantidad de veces que otros usuarios han compartido tu música en sus perfiles.
+  </Card>
+  <Card title="Seguidores" icon="user-plus">
+    Evolución del número de seguidores de tu perfil a lo largo del tiempo para medir el crecimiento de tu comunidad.
+  </Card>
+  <Card title="Comentarios y engagement" icon="comments">
+    Volumen de comentarios por pista y métricas generales de interacción para entender qué contenido genera más conversación.
+  </Card>
+</CardGroup>
 
-- **Subida directa de pistas** — sube nuevas canciones a tu perfil de SoundCloud directamente desde Addictiva Records, incluyendo título, descripción, género y artwork.
-- **Plays** — número total de reproducciones por pista y totales del perfil.
-- **Likes** — cantidad de "me gusta" recibidos en cada pista y en tu perfil.
-- **Reposts** — veces que otros usuarios han compartido tus pistas en su feed.
-- **Seguidores** — total actual de seguidores de tu perfil de SoundCloud.
-- **Comentarios** — visualización de los comentarios más recientes recibidos en tus pistas.
+## SoundCloud Free vs SoundCloud Pro
 
-<Note>
-  La funcionalidad de **subida directa** desde Addictiva Records a SoundCloud está disponible exclusivamente para cuentas de **SoundCloud Pro** y **SoundCloud Pro Unlimited**. Si tu cuenta es gratuita, podrás visualizar tus estadísticas, pero no podrás subir pistas de forma remota desde el panel. Para actualizar tu plan, visita [soundcloud.com/pro](https://soundcloud.com/pro).
-</Note>
+Las funciones disponibles en Addictiva Records pueden variar según el tipo de cuenta que tengas en SoundCloud:
 
-## Preguntas frecuentes
+<Tabs>
+  <Tab title="Cuenta gratuita">
+    Con una cuenta gratuita de SoundCloud conectada a Addictiva Records, tendrás acceso a:
 
-<Accordion title="¿Puedo subir canciones directamente desde Addictiva Records a SoundCloud?">
-  Sí, siempre que tengas una cuenta de **SoundCloud Pro** o **SoundCloud Pro Unlimited** activa. Desde **Plataformas → SoundCloud → Subir pista**, podrás seleccionar el archivo de audio (formatos MP3, WAV y FLAC), añadir metadatos como título, descripción, género, etiquetas y artwork, y publicar directamente en tu perfil. Las pistas subidas desde Addictiva Records aparecen en tu perfil de SoundCloud exactamente igual que si las hubieras subido desde la plataforma original.
-</Accordion>
+    - Conteo de plays totales
+    - Número de likes y reposts
+    - Seguimiento de seguidores
+    - Comentarios por track
 
-<Accordion title="¿Se sincronizan los comentarios?">
-  Addictiva Records importa los **comentarios más recientes** de tus pistas de SoundCloud para que puedas revisarlos desde tu panel sin tener que abrir la aplicación. Los comentarios se muestran en orden cronológico inverso y se actualizan junto con el ciclo regular de sincronización de datos (cada 24 horas). En este momento no es posible responder a comentarios de SoundCloud desde Addictiva Records; para interactuar con tu comunidad deberás acceder directamente a tu perfil de SoundCloud.
-</Accordion>
+    Las analíticas disponibles son las mismas que SoundCloud expone públicamente a través de su API, lo que significa que los datos demográficos detallados (edad, país, fuente de tráfico) no están incluidos en el plan gratuito de SoundCloud.
+  </Tab>
+  <Tab title="SoundCloud Pro / Pro Unlimited">
+    Si tienes una cuenta **SoundCloud Pro** o **Pro Unlimited**, Addictiva Records puede acceder a un conjunto ampliado de datos:
+
+    - Todos los datos del plan gratuito
+    - Estadísticas de oyentes por país y ciudad
+    - Fuentes de tráfico (búsqueda directa, widget embebido, redes sociales, etc.)
+    - Datos de descargas (si tienes habilitada esa opción por track)
+    - Histórico de plays con mayor granularidad temporal
+
+    Actualizar tu cuenta de SoundCloud a Pro enriquece automáticamente las analíticas que puedes ver en Addictiva Records sin necesidad de reconectar la integración.
+  </Tab>
+</Tabs>
+
+<Tip>
+  SoundCloud es una herramienta excelente para publicar demos, versiones acústicas o adelantos de tus próximos lanzamientos antes de distribuirlos oficialmente en otras plataformas. Puedes usar Addictiva Records para medir la reacción de tu audiencia en SoundCloud y tomar decisiones informadas —como ajustar la mezcla o el artwork— antes de la distribución masiva en Spotify, Apple Music y YouTube Music.
+</Tip>

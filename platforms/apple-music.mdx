@@ -1,47 +1,70 @@
 ---
-title: "Conecta Apple Music y Apple Music for Artists a tu Dashboard"
+title: "Conecta Apple Music a tu panel de Addictiva Records"
 sidebarTitle: "Apple Music"
-description: "Sincroniza Apple Music for Artists con Addictiva Records para monitorear reproducciones, compras y estadísticas de oyentes en tiempo real."
+description: "Integra Apple Music con Addictiva Records usando tu API Key para acceder a streams, datos de Shazam y estadísticas de oyentes por país."
 ---
 
-Apple Music es una de las plataformas de streaming con mayor fidelidad de pago por reproducción, y sus datos analíticos ofrecen información valiosa sobre el comportamiento de tu audiencia. Al integrar **Apple Music for Artists** con Addictiva Records, puedes visualizar reproducciones, compras de canciones y álbumes, datos de detección por Shazam y la demografía de tus oyentes, todo desde tu panel central. La conexión se establece mediante una clave de API generada desde tu cuenta de Apple Developer.
+Apple Music es una de las plataformas de streaming con mayor base de suscriptores de pago en el mundo, y su integración con Addictiva Records te permite consultar tus estadísticas directamente desde tu panel. A diferencia de otras plataformas que usan OAuth 2.0, Apple Music utiliza autenticación por **API Key**: deberás generar tu clave desde el portal de Apple Music for Artists y pegarla en la configuración de Addictiva Records. El proceso tarda solo unos minutos y, una vez completado, tus datos comenzarán a sincronizarse automáticamente.
 
 ## Cómo conectar Apple Music
 
 <Steps>
-  <Step title="Genera tu token de MusicKit en Apple Developer">
-    Inicia sesión en el [Portal de Apple Developer](https://developer.apple.com). En el menú **Certificates, Identifiers & Profiles**, selecciona **Keys** y crea una nueva clave habilitando el servicio **MusicKit**. Descarga el archivo de clave (`.p8`) — solo podrás descargarlo una vez.
+  <Step title="Obtener tu API Key desde Apple Music for Artists">
+    Accede a [artists.apple.com](https://artists.apple.com) con tu Apple ID y entra al portal de **Apple Music for Artists**. Dentro del panel, navega a la sección de **Configuración de cuenta** o **Integraciones de API** y genera una nueva clave de acceso. Copia el valor de la clave antes de cerrar la ventana, ya que algunos portales solo la muestran una vez.
   </Step>
-  <Step title="Reúne tus credenciales de Apple Developer">
-    Anota los siguientes datos que necesitarás: el **Key ID** de la clave que acabas de crear, tu **Team ID** (visible en la esquina superior derecha del portal) y el contenido del archivo `.p8`.
+  <Step title="Ir a Configuración > Plataformas en Addictiva Records">
+    Desde tu panel de Addictiva Records, dirígete al menú lateral y selecciona **Configuración**. Luego haz clic en la sección **Plataformas** para ver todas las integraciones disponibles.
   </Step>
-  <Step title="Ingresa las credenciales en Addictiva Records">
-    En tu dashboard de Addictiva Records, ve a **Plataformas → Apple Music** y haz clic en **Conectar**. Introduce el **Key ID**, el **Team ID** y pega el contenido del archivo `.p8` en los campos correspondientes. Haz clic en **Guardar y verificar**.
+  <Step title="Seleccionar Apple Music">
+    Localiza la tarjeta de **Apple Music** en el listado de plataformas y haz clic sobre ella para abrir el formulario de conexión.
   </Step>
-  <Step title="Vincula tu perfil de Apple Music for Artists">
-    Una vez validadas las credenciales, Addictiva Records buscará el perfil artístico asociado a tu cuenta. Selecciona el perfil correcto y confirma la vinculación. Los datos comenzarán a importarse en los próximos minutos.
+  <Step title="Pegar tu API Key">
+    En el campo **API Key**, pega la clave que copiaste desde el portal de Apple Music for Artists. Asegúrate de no incluir espacios al inicio ni al final del texto.
+  </Step>
+  <Step title="Guardar y verificar la conexión">
+    Haz clic en **Guardar**. Addictiva Records validará automáticamente la clave realizando una llamada de prueba a la API de Apple Music. Si la clave es correcta, verás la tarjeta marcada como **Conectado** y la sincronización inicial comenzará de inmediato.
   </Step>
 </Steps>
 
-## Datos que se sincronizan
+## Qué puedes ver después de conectar
 
-Con la integración activa, Addictiva Records importa las siguientes métricas desde Apple Music for Artists:
+Con Apple Music integrado, tu panel de Addictiva Records mostrará los siguientes datos:
 
-- **Reproducciones** — número total de veces que se han reproducido tus canciones en Apple Music.
-- **Compras** — ventas individuales de canciones y álbumes realizadas a través de iTunes Store.
-- **Datos de Shazam** — número de identificaciones de tus canciones a través de la aplicación Shazam.
-- **Demografía de oyentes** — edad, género y ubicación geográfica de tu audiencia en Apple Music.
+<CardGroup cols={2}>
+  <Card title="Conteo de streams" icon="chart-line">
+    Número total de reproducciones por canción y álbum en el catálogo de Apple Music.
+  </Card>
+  <Card title="Plays y oyentes únicos" icon="headphones">
+    Seguimiento de escuchas únicas y totales para entender el alcance real de tu música.
+  </Card>
+  <Card title="Datos de Shazam" icon="magnifying-glass-music">
+    Cuántas veces han identificado tus canciones a través de Shazam, integrado de forma nativa en Apple Music.
+  </Card>
+  <Card title="Oyentes por país" icon="earth-americas">
+    Mapa de distribución geográfica de tu audiencia para planificar giras o campañas por región.
+  </Card>
+</CardGroup>
 
-<Warning>
-  Apple requiere que generes un **token de desarrollador de MusicKit** desde una cuenta activa de Apple Developer Program para autenticar la conexión con Addictiva Records. Este token tiene una validez máxima de 6 meses, después de la cual deberás regenerarlo y actualizar las credenciales en tu dashboard para mantener la sincronización activa. Addictiva Records te enviará un aviso por correo electrónico 14 días antes de que expire tu token.
-</Warning>
+<Info>
+  Para encontrar tu API Key en Apple Music for Artists, inicia sesión en [artists.apple.com](https://artists.apple.com), ve a la esquina superior derecha donde aparece tu nombre de cuenta y selecciona **Configuración de cuenta**. En esa pantalla encontrarás la sección **Acceso a API** desde donde puedes generar, ver y revocar claves de integración. Si no ves esta opción, asegúrate de que tu cuenta tenga el rol de **Administrador** o **Manager** en el perfil del artista.
+</Info>
 
-## Preguntas frecuentes
+## Renovar o rotar tu API Key
 
-<Accordion title="¿Necesito una cuenta de Apple Developer?">
-  Sí. Para conectar Apple Music for Artists con Addictiva Records es necesario tener una cuenta activa del **Apple Developer Program**, que tiene un costo anual de 99 USD. Esta cuenta es la que te permite generar la clave MusicKit requerida para la autenticación. Si ya tienes una cuenta de Apple Developer para otras aplicaciones o servicios, puedes usar la misma: simplemente crea una clave nueva con MusicKit habilitado desde el portal. Si no tienes una cuenta de Apple Developer, deberás registrarte en [developer.apple.com](https://developer.apple.com) antes de continuar.
-</Accordion>
+Las API Keys de Apple Music pueden caducar o necesitar ser cambiadas por razones de seguridad. Cuando esto ocurra, sigue estos pasos para actualizar tu clave en Addictiva Records:
 
-<Accordion title="¿Cuánto tiempo tarda en sincronizar?">
-  La primera sincronización puede tardar entre **15 y 30 minutos** dependiendo del volumen de lanzamientos y datos históricos asociados a tu perfil. A partir de esa sincronización inicial, los datos se actualizan automáticamente **cada 24 horas**. Los datos de Shazam pueden tener un retraso adicional de hasta 48 horas según los ciclos de actualización internos de Apple. Si tras 30 minutos no ves datos en tu panel, verifica que las credenciales sean correctas en **Plataformas → Apple Music → Configuración**.
+<Steps>
+  <Step title="Generar una nueva API Key en Apple Music for Artists">
+    Accede a [artists.apple.com](https://artists.apple.com), ve a **Configuración de cuenta > Acceso a API** y genera una nueva clave. Copia el nuevo valor de inmediato.
+  </Step>
+  <Step title="Ir a Configuración > Plataformas en Addictiva Records">
+    Navega a la sección de plataformas en tu panel y haz clic en la tarjeta de **Apple Music**.
+  </Step>
+  <Step title="Editar y reemplazar la API Key">
+    Haz clic en **Editar conexión**, borra la clave anterior y pega la nueva. Luego haz clic en **Guardar y verificar** para confirmar que la nueva clave funciona correctamente.
+  </Step>
+</Steps>
+
+<Accordion title="¿Qué pasa si mi API Key expira sin actualizarla?">
+  Si tu API Key de Apple Music caduca y no la actualizas en Addictiva Records, la sincronización de datos se detendrá. Verás la tarjeta de Apple Music marcada con un aviso de **Error de conexión** en tu panel. Tus datos históricos ya sincronizados se conservarán, pero no se añadirán nuevas estadísticas hasta que actualices la clave. Te recomendamos activar las notificaciones de expiración en la sección de alertas del panel.
 </Accordion>

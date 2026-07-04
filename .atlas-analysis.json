@@ -1,7 +1,7 @@
 {
   "projectType": "saas",
-  "projectName": "Addictiva Records – Music Distribution Hub",
-  "projectDescription": "A single dashboard that connects and manages all your accounts across every music upload and distribution platform.",
+  "projectName": "Addictiva Records",
+  "projectDescription": "Panel central para conectar, gestionar y distribuir tu música a todas las plataformas de streaming desde un solo lugar.",
   "theme": "almond",
   "primaryColor": "#ef7025",
   "lightColor": "#eec9bc",
@@ -13,11 +13,7 @@
         "groups": [
           {
             "group": "Inicio",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "account-setup"
-            ]
+            "pages": ["introduction", "quickstart", "account-setup"]
           },
           {
             "group": "Plataformas",
@@ -32,7 +28,7 @@
             ]
           },
           {
-            "group": "Gestión de Canciones",
+            "group": "Gestión de Música",
             "pages": [
               "music/upload",
               "music/metadata",
@@ -50,29 +46,35 @@
           },
           {
             "group": "Ayuda",
-            "pages": [
-              "help/faq",
-              "help/troubleshooting"
-            ]
+            "pages": ["help/faq", "help/troubleshooting"]
           }
         ]
       }
     ]
   },
   "keyFeatures": [
-    "Conexión centralizada con todas las plataformas de música (Spotify, Apple Music, YouTube Music, SoundCloud, DistroKid, TuneCore, etc.)",
-    "Subida y distribución de canciones desde un solo lugar",
-    "Gestión de metadatos (título, artista, álbum, género, portada)",
-    "Panel de analíticas unificado: streams, oyentes y ganancias por plataforma",
+    "Conexión centralizada con todas las plataformas de música (Spotify, Apple Music, YouTube Music, SoundCloud, DistroKid, TuneCore)",
+    "Subida y distribución de canciones desde un solo panel",
+    "Gestión completa de metadatos: título, artista, álbum, género y portada",
+    "Panel de analíticas unificado: streams, oyentes únicos y ganancias por plataforma",
     "Programación y seguimiento de lanzamientos",
-    "Notificaciones de estado de distribución en tiempo real"
+    "Notificaciones de estado de distribución en tiempo real",
+    "Gestión de catálogo y múltiples perfiles de artista"
   ],
   "publicApiSurface": [
-    "Conectar cuenta de plataforma (OAuth / API Key)",
-    "Subir canción (título, archivo de audio, portada, metadatos)",
+    "Conectar cuenta de plataforma (OAuth 2.0 / API Key)",
+    "Subir canción (archivo WAV/FLAC/MP3, portada, metadatos)",
+    "Crear y programar lanzamiento",
     "Distribuir lanzamiento a plataformas seleccionadas",
     "Consultar estado de distribución",
-    "Ver estadísticas de reproducción y ganancias",
+    "Ver estadísticas de streams y ganancias",
     "Gestionar catálogo de canciones"
-  ]
+  ],
+  "language": "es",
+  "appUrl": "https://app.adictivarecords.com",
+  "supportEmail": "soporte@adictivarecords.com",
+  "socials": {
+    "instagram": "https://instagram.com/adictivarecords",
+    "x": "https://x.com/adictivarecords"
+  }
 }

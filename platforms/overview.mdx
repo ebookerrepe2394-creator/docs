@@ -1,47 +1,68 @@
 ---
-title: "Plataformas de Música Compatibles con Addictiva Records"
+title: "Plataformas compatibles con Addictiva Records"
 sidebarTitle: "Todas las Plataformas"
-description: "Addictiva Records conecta Spotify, Apple Music, YouTube Music, SoundCloud, DistroKid y TuneCore para distribuir tu música desde un panel unificado."
+description: "Conecta Spotify, Apple Music, YouTube Music, SoundCloud, DistroKid y TuneCore a tu panel de Addictiva Records desde un solo lugar."
 ---
 
-Addictiva Records funciona como el centro de mando para tu carrera musical: en lugar de iniciar sesión en cada plataforma por separado, conectas todas tus cuentas una sola vez y gestionas distribución, estadísticas y lanzamientos desde un único dashboard. Ya sea que quieras subir un nuevo sencillo a DistroKid, revisar tus streams en Spotify o monitorear tus oyentes en Apple Music, todo ocurre en el mismo lugar, sin cambiar de pestaña ni recordar decenas de contraseñas.
+Addictiva Records te permite centralizar la gestión de tu música conectando las principales plataformas de streaming y distribución en un único panel. Ya sea que quieras ver tus analíticas de Spotify, revisar reportes de ventas en DistroKid o monitorear tus plays en SoundCloud, todo está disponible sin necesidad de cambiar entre aplicaciones. La conexión con cada plataforma se realiza mediante dos métodos estándar y seguros: OAuth 2.0 o API Key, dependiendo de lo que cada servicio soporte.
+
+## Plataformas disponibles
+
+| Plataforma     | Tipo de conexión | Qué puedes hacer          | Estado          |
+|----------------|------------------|---------------------------|-----------------|
+| Spotify        | OAuth 2.0        | Streaming, analíticas     | ✅ Disponible   |
+| Apple Music    | API Key          | Streaming, analíticas     | ✅ Disponible   |
+| YouTube Music  | OAuth 2.0        | Streaming, video          | ✅ Disponible   |
+| SoundCloud     | OAuth 2.0        | Streaming, fans           | ✅ Disponible   |
+| DistroKid      | API Key          | Distribución              | ✅ Disponible   |
+| TuneCore       | API Key          | Distribución              | ✅ Disponible   |
+
+## Explora cada plataforma
 
 <CardGroup cols={3}>
-  <Card title="Spotify" icon="music" href="/platforms/spotify">
-    Visualiza streams, oyentes mensuales y colocaciones en playlists directamente desde tu panel.
+  <Card title="Spotify" icon="spotify" href="/platforms/spotify">
+    Conecta tu cuenta vía OAuth 2.0 y accede a analíticas de streams, oyentes y listas de reproducción.
   </Card>
   <Card title="Apple Music" icon="apple" href="/platforms/apple-music">
-    Monitorea reproducciones, compras y datos de Shazam con Apple Music for Artists.
+    Usa tu API Key de Apple Music for Artists para ver reproducciones, datos de Shazam y más.
   </Card>
   <Card title="YouTube Music" icon="youtube" href="/platforms/youtube-music">
-    Rastrea vistas, suscriptores y ganancias de tu canal de YouTube en tiempo real.
+    Integra tu canal vía OAuth 2.0 y sigue los ingresos de Content ID y el crecimiento de suscriptores.
   </Card>
-  <Card title="SoundCloud" icon="soundwave" href="/platforms/soundcloud">
-    Sube pistas directamente y consulta plays, likes, reposts y seguidores en un solo lugar.
+  <Card title="SoundCloud" icon="soundcloud" href="/platforms/soundcloud">
+    Conecta tu perfil OAuth 2.0 para monitorear plays, likes, reposts y comentarios.
   </Card>
-  <Card title="DistroKid" icon="record-vinyl" href="/platforms/distrokid">
-    Distribuye nuevos lanzamientos a más de 150 tiendas y gestiona tus releases existentes.
+  <Card title="DistroKid" icon="music" href="/platforms/distrokid">
+    Usa tu API Key para distribuir lanzamientos y consultar reportes de ventas directamente.
   </Card>
-  <Card title="TuneCore" icon="compact-disc" href="/platforms/tunecore">
-    Envía álbumes, singles y EPs a más de 150 plataformas y haz seguimiento de regalías.
+  <Card title="TuneCore" icon="record-vinyl" href="/platforms/tunecore">
+    Conecta con API Key y gestiona distribución, reportes por tienda y resúmenes de regalías.
   </Card>
 </CardGroup>
 
-## Tipos de conexión por plataforma
+## Métodos de conexión
 
-Cada plataforma utiliza un método de autenticación distinto. La siguiente tabla resume cómo Addictiva Records se conecta con cada servicio y qué nivel de acceso se establece:
+Addictiva Records admite dos formas de autenticar tu cuenta con cada plataforma externa. Entender la diferencia te ayuda a saber qué esperar durante el proceso de conexión.
 
-| Plataforma      | Tipo de conexión | Acceso de lectura | Acceso de escritura |
-| --------------- | ---------------- | :---------------: | :-----------------: |
-| Spotify         | OAuth 2.0        | ✓                 | —                   |
-| Apple Music     | API Key (MusicKit) | ✓               | —                   |
-| YouTube Music   | Google OAuth 2.0 | ✓                 | —                   |
-| SoundCloud      | OAuth 2.0        | ✓                 | ✓                   |
-| DistroKid       | API Key          | ✓                 | ✓                   |
-| TuneCore        | API Key          | ✓                 | ✓                   |
+<Tabs>
+  <Tab title="OAuth 2.0">
+    OAuth 2.0 es el método de autenticación que utilizan plataformas como **Spotify**, **YouTube Music** y **SoundCloud**. Al conectar tu cuenta, Addictiva Records te redirige a la página oficial de inicio de sesión de la plataforma. Tú ingresas tus credenciales directamente en el sitio de origen —Addictiva Records nunca ve ni almacena tu contraseña— y luego autorizas los permisos solicitados. Una vez completado el proceso, regresas automáticamente al dashboard ya conectado.
 
-**OAuth 2.0** redirige al artista a la página oficial de la plataforma para autorizar el acceso sin compartir credenciales con Addictiva Records. **API Key** requiere generar una clave desde la configuración de la plataforma y pegarla en tu dashboard de Addictiva Records.
+    **Ventajas:**
+    - Mayor seguridad: tus credenciales nunca salen de la plataforma original.
+    - Puedes revocar el acceso en cualquier momento desde la configuración de la plataforma.
+    - El token se renueva automáticamente sin que tengas que hacer nada.
+  </Tab>
+  <Tab title="API Key">
+    La conexión por **API Key** es utilizada por plataformas como **Apple Music**, **DistroKid** y **TuneCore**. En este caso, accedes al panel de configuración o cuenta de la plataforma, generas o copias tu clave de API personal, y la pegas en el campo correspondiente dentro de Addictiva Records. Esta clave actúa como una contraseña de acceso para aplicaciones de terceros.
+
+    **Lo que debes tener en cuenta:**
+    - Guarda tu API Key en un lugar seguro; no la compartas con nadie.
+    - Algunas plataformas establecen fechas de expiración para las claves; tendrás que renovarlas cuando esto ocurra.
+    - Puedes revocar o rotar la clave desde el panel de la plataforma en cualquier momento.
+  </Tab>
+</Tabs>
 
 <Note>
-  Conectar una plataforma a Addictiva Records otorga acceso de lectura para importar estadísticas y, en las plataformas que lo permiten, acceso de escritura para publicar contenido y gestionar lanzamientos. Puedes revocar el acceso en cualquier momento desde **Configuración → Plataformas** sin afectar tu cuenta en la plataforma original.
+  El plan gratuito de Addictiva Records te permite conectar hasta **2 plataformas** simultáneamente. Para conectar todas las plataformas disponibles sin límite, actualiza a un plan de pago. Consulta la sección de **Planes y Precios** para más detalles.
 </Note>

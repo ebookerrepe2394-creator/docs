@@ -1,217 +1,171 @@
 ---
-title: "Solución de Problemas Comunes en Addictiva Records"
-sidebarTitle: "Problemas Comunes"
-description: "Resuelve los problemas más frecuentes al conectar plataformas, subir música o verificar el estado de distribución en Addictiva Records."
+title: "Solución de problemas comunes en Addictiva Records"
+sidebarTitle: "Problemas"
+description: "Resuelve errores de conexión con plataformas, fallos en la distribución, datos faltantes en analíticas y problemas con pagos en Addictiva Records."
 ---
 
-Aunque Addictiva Records está diseñado para que todo funcione de forma fluida, sabemos que a veces pueden surgir inconvenientes técnicos. En esta página encontrarás soluciones paso a paso para los problemas más reportados por nuestra comunidad. Si después de seguir estas indicaciones el problema persiste, nuestro equipo de soporte está disponible para ayudarte.
+Esta guía cubre los problemas que los artistas reportan con mayor frecuencia en Addictiva Records y cómo resolverlos paso a paso. Organiza los problemas por categoría para llegar más rápido a la solución que necesitas. Si ninguna de las soluciones aquí descritas resuelve tu situación, contacta a nuestro equipo de soporte al final de esta página.
 
-## Conexión de plataformas
+## Problemas de conexión con plataformas
 
-<Accordion title="No puedo conectar mi cuenta de Spotify">
-  Si la conexión con Spotify for Artists falla o no se completa, sigue estos pasos:
+<Accordion title="Error al conectar Spotify: token expirado">
+  Este error aparece cuando el token de autorización OAuth de Spotify ha caducado o fue revocado. Sucede con frecuencia si cambiaste tu contraseña de Spotify, revocaste permisos desde la configuración de Spotify, o si han pasado más de 90 días sin actividad.
 
-  <Steps>
-    <Step title="Verifica los permisos en Spotify for Artists">
-      Accede a [Spotify for Artists](https://artists.spotify.com) y ve a **Configuración → Acceso de aplicaciones de terceros**. Asegúrate de que Addictiva Records tiene permiso para acceder a tu cuenta. Si no aparece en la lista, el proceso de autorización no se completó correctamente.
-    </Step>
-    <Step title="Desconecta y vuelve a conectar">
-      En Addictiva Records, ve a **Configuración → Plataformas conectadas**, haz clic en **Desconectar** junto a Spotify y espera 30 segundos. Luego haz clic en **Conectar Spotify** e inicia el proceso de autorización desde cero.
-    </Step>
-    <Step title="Prueba en modo incógnito">
-      Las cookies o extensiones del navegador pueden interferir con el flujo de autorización. Intenta el proceso desde una ventana de incógnito o un navegador diferente.
-    </Step>
-  </Steps>
+  **Cómo reconectar:**
 
-  <Warning>
-    Asegúrate de que la cuenta de Spotify que estás autorizando es la misma que está asociada a tu perfil de Spotify for Artists. Conectar una cuenta de oyente regular no funcionará.
-  </Warning>
-</Accordion>
-
-<Accordion title="La conexión con DistroKid falla constantemente">
-  Los problemas de conexión con DistroKid suelen tener una de estas causas:
-
-  <Steps>
-    <Step title="Verifica que la clave API es correcta">
-      En DistroKid, ve a **Cuenta → Configuración de API** y copia la clave más reciente. Pégala nuevamente en Addictiva Records desde **Configuración → Plataformas conectadas → DistroKid**. Asegúrate de no incluir espacios al inicio o al final.
-    </Step>
-    <Step title="Revisa el estado de tu cuenta en DistroKid">
-      Una suscripción vencida o una cuenta suspendida en DistroKid bloquea el acceso a su API. Ingresa directamente a [distrokid.com](https://distrokid.com) y confirma que tu plan está activo.
-    </Step>
-    <Step title="Genera una nueva clave API">
-      Si la clave es antigua, puede haber expirado. Genera una nueva desde el panel de DistroKid y actualízala en Addictiva Records.
-    </Step>
-  </Steps>
+  1. Ve a **Configuración > Plataformas**.
+  2. Localiza Spotify y haz clic en **"Desconectar"**.
+  3. Confirma la desconexión en el diálogo que aparece.
+  4. Haz clic en **"Conectar Spotify"** e inicia sesión con tus credenciales de Spotify.
+  5. Acepta los permisos solicitados. La reconexión debería completarse en menos de un minuto.
 
   <Note>
-    DistroKid ocasionalmente realiza mantenimientos programados que pueden interrumpir temporalmente el acceso a su API. Si todo parece estar correcto, espera unos minutos e intenta nuevamente.
+    Si el error persiste después de reconectar, accede a [spotify.com/account/apps](https://www.spotify.com/account/apps), revoca el acceso de Addictiva Records y repite el proceso de conexión desde el paso 4.
   </Note>
 </Accordion>
 
-<Accordion title="Los datos de Apple Music no se actualizan">
-  La integración con Apple Music opera con un ciclo de actualización diferente al de otras plataformas:
+<Accordion title="Error al conectar con API Key: clave inválida o expirada">
+  Algunas plataformas (como SoundCloud o distribuidores propios) se conectan mediante API Key en lugar de OAuth. Si ves el mensaje *"API Key inválida"* o *"Autenticación fallida"*, la clave puede haber expirado o sido regenerada en la plataforma de origen.
 
-  - **Los datos de Apple Music se sincronizan una vez por semana**, generalmente los martes. No es posible forzar una actualización en tiempo real.
-  - Si los datos llevan **más de 10 días sin actualizarse**, el problema puede ser que tu token de MusicKit haya expirado.
+  **Cómo resolverlo:**
 
-  <Steps>
-    <Step title="Verifica el estado del token de MusicKit">
-      Ve a **Configuración → Plataformas conectadas → Apple Music** y revisa la fecha de expiración del token. Los tokens de MusicKit tienen una vigencia de **180 días**.
-    </Step>
-    <Step title="Renueva el token">
-      Si el token expiró, haz clic en **Renovar conexión** y sigue el proceso de autorización con tu cuenta de Apple for Artists.
-    </Step>
-  </Steps>
+  1. Inicia sesión directamente en la plataforma afectada (por ejemplo, tu panel de SoundCloud Pro).
+  2. Navega a la sección de **Desarrolladores** o **Integraciones** de esa plataforma.
+  3. Genera una nueva API Key (o rota la existente).
+  4. Copia la nueva clave.
+  5. En Addictiva Records, ve a **Configuración > Plataformas**, selecciona la plataforma y pega la nueva API Key en el campo correspondiente.
+  6. Haz clic en **"Guardar y verificar"**.
+</Accordion>
 
-  <Info>
-    Apple Music no ofrece datos en tiempo real a ninguna plataforma de terceros. Este comportamiento es una limitación del sistema de Apple, no de Addictiva Records.
-  </Info>
+<Accordion title="La plataforma aparece como 'ya conectada' pero no funciona">
+  En ocasiones el estado de conexión en Addictiva Records queda desincronizado con la plataforma real, especialmente después de actualizaciones de la plataforma o cambios de cuenta.
+
+  **Solución recomendada (desconectar y reconectar):**
+
+  1. Ve a **Configuración > Plataformas**.
+  2. Haz clic en los tres puntos (**⋯**) junto a la plataforma problemática y selecciona **"Forzar desconexión"**.
+  3. Espera 30 segundos para que el estado se limpie completamente.
+  4. Vuelve a conectar la plataforma siguiendo el flujo de autorización normal.
+  5. Una vez reconectada, ve al **Dashboard** y verifica que los datos de esa plataforma aparecen correctamente.
 </Accordion>
 
 ---
 
-## Subida de archivos
+## Problemas de distribución
 
-<Accordion title="Mi archivo de audio fue rechazado al subirlo">
-  El rechazo de un archivo de audio puede deberse a varias razones. Verifica lo siguiente:
+<Accordion title="La distribución lleva más de 7 días sin completarse">
+  Si tu distribución lleva más de 7 días en estado *"En proceso"* sin avanzar, revisa los siguientes puntos antes de contactar soporte:
 
-  - **Formato:** solo se aceptan WAV, MP3 y FLAC. Formatos como AAC, OGG o M4A no son compatibles.
-  - **Tasa de muestreo (sample rate):** debe ser de **44.1 kHz como mínimo**. Archivos a 22 kHz o 32 kHz serán rechazados.
-  - **Profundidad de bits (bit depth):** mínimo **16 bits**. Se recomienda 24 bits para la mejor calidad.
-  - **Canales:** el archivo debe estar en **estéreo** (2 canales). Los archivos mono pueden ser rechazados por algunas plataformas.
-  - **Duración:** los archivos de menos de 30 segundos pueden ser rechazados por algunos distribuidores.
+  - **Metadatos completos:** asegúrate de que el título, artista, género, fecha de lanzamiento y todos los campos obligatorios estén completados. Un campo vacío puede bloquear la distribución silenciosamente.
+  - **Formato de audio correcto:** el archivo debe ser WAV o FLAC de al menos 44.1 kHz y 16-bit. Archivos MP3 de baja calidad o con errores de codificación pueden ser rechazados automáticamente.
+  - **Portada válida:** la imagen de portada debe ser JPG o PNG, mínimo **3000 × 3000 píxeles**, en modo de color RGB y sin texto ni logos de plataformas de streaming.
 
-  <Tip>
-    Puedes verificar las propiedades técnicas de tu archivo de forma gratuita con herramientas como **MediaInfo** o **Adobe Audition**. Si necesitas convertir el archivo, usa **Audacity** o **FFmpeg**.
-  </Tip>
+  Si todo lo anterior está en orden y la distribución sigue bloqueada, escríbenos a soporte@adictivarecords.com con el número de tu distribución.
 </Accordion>
 
-<Accordion title="La imagen de portada no es aceptada">
-  Si tu portada es rechazada durante la carga, revisa que cumpla con todos estos requisitos:
+<Accordion title="Error 'ISRC duplicado' al distribuir">
+  Este error indica que el código ISRC asignado a tu canción ya existe en la base de datos global y está asociado a otra grabación. Puede ocurrir si:
 
-  - **Dimensiones exactas:** 3000 × 3000 píxeles. No se aceptan imágenes rectangulares ni cuadradas de menor resolución.
-  - **Formato:** JPG o PNG únicamente.
-  - **Tamaño de archivo:** máximo **10 MB**.
-  - **Modo de color:** debe estar en modo **RGB**. Las imágenes en modo CMYK serán rechazadas.
-  - **Contenido:** no debe incluir logos de plataformas (Spotify, Apple Music, etc.), URLs, precios ni texto de carácter publicitario.
+  - Reutilizaste manualmente un ISRC de otro lanzamiento.
+  - Importaste un ISRC que ya fue registrado por otro distribuidor.
+
+  **Cómo resolverlo:**
+
+  1. En **Mis lanzamientos**, abre la distribución con el error y haz clic en **"Editar"**.
+  2. En el campo ISRC, borra el código existente.
+  3. Selecciona la opción **"Generar ISRC automáticamente"** para que Addictiva Records asigne uno nuevo y válido.
+  4. Guarda los cambios y vuelve a enviar la distribución.
 
   <Warning>
-    Algunas plataformas como Spotify aplican revisión manual a las portadas. Aunque Addictiva Records acepte la imagen, el distribuidor o la plataforma final puede rechazarla si el contenido visual no cumple sus políticas.
+    Si la canción ya fue distribuida anteriormente con ese ISRC en otra plataforma, cambiar el código puede generar inconsistencias en los datos históricos de streams. Consulta con soporte antes de proceder si este es tu caso.
   </Warning>
 </Accordion>
 
-<Accordion title="La subida se detiene a mitad del proceso">
-  Si una carga se interrumpe antes de completarse, prueba las siguientes soluciones en orden:
+<Accordion title="Canción rechazada por la plataforma">
+  Las plataformas pueden rechazar una distribución por varias razones. Estos son los motivos más comunes y cómo corregirlos:
 
-  <Steps>
-    <Step title="Verifica tu conexión a internet">
-      Las cargas de archivos grandes requieren una conexión estable. Evita usar redes WiFi públicas o conexiones con alta latencia. Si es posible, conéctate por cable Ethernet.
-    </Step>
-    <Step title="Prueba con un navegador diferente">
-      Algunas extensiones del navegador (bloqueadores de anuncios, VPNs integradas) pueden interrumpir las cargas. Prueba con **Google Chrome** o **Mozilla Firefox** en su versión más reciente.
-    </Step>
-    <Step title="Limpia la caché del navegador">
-      Ve a la configuración de tu navegador y borra la caché y las cookies. Luego reinicia el navegador e intenta la carga nuevamente.
-    </Step>
-    <Step title="Reduce el tamaño del archivo si es posible">
-      Si el archivo es mayor a 300 MB, intenta convertirlo a FLAC para reducir su peso sin perder calidad, y repite la carga.
-    </Step>
-  </Steps>
+  | Motivo de rechazo | Solución |
+  |---|---|
+  | **Portada incorrecta** (tamaño menor a 3000×3000 px, formato incorrecto o logos de plataformas) | Reemplaza la portada por una imagen JPG/PNG de 3000×3000 px sin logos de Spotify, Apple, etc. |
+  | **Audio demasiado corto** (menos de 30 segundos) | El archivo de audio debe tener una duración mínima de 30 segundos |
+  | **Contenido explícito no marcado** | Si la canción contiene lenguaje adulto, activa la casilla **"Contenido explícito"** en los metadatos |
+  | **Derechos de contenido** | Si la canción contiene samples no licenciados o material con copyright de terceros, la plataforma puede rechazarla automáticamente |
 
-  <Note>
-    Addictiva Records guarda el progreso de carga automáticamente durante los primeros 60 minutos. Si cierras la pestaña por accidente, vuelve a la sección de carga y es posible que encuentres la opción de **reanudar** la subida.
-  </Note>
+  Después de corregir el problema, ve a **Mis lanzamientos**, abre la distribución rechazada y haz clic en **"Volver a enviar"**.
+</Accordion>
+
+<Accordion title="Distribución atascada en 'En revisión' por más de 48 horas">
+  El estado *"En revisión"* normal dura entre 1 y 24 horas. Si tu distribución lleva más de **48 horas** en ese estado sin avanzar, es probable que haya una revisión manual pendiente por parte del equipo de Addictiva Records o de la plataforma de destino.
+
+  En este caso debes **contactar a soporte** directamente:
+
+  - Escríbenos a **soporte@adictivarecords.com**
+  - Incluye en el asunto: *"Distribución en revisión +48h"* y el nombre del lanzamiento
+  - Adjunta el número de referencia de la distribución (lo encuentras en **Mis lanzamientos**)
+
+  Nuestro equipo revisará el caso y te responderá en un plazo máximo de 1 día hábil.
 </Accordion>
 
 ---
 
-## Distribución
+## Analíticas y datos
 
-<Accordion title="Mi lanzamiento lleva varios días con el estado 'En revisión'">
-  El estado **"En revisión"** es completamente normal en el proceso de distribución. Los tiempos estándar son:
+<Accordion title="El dashboard muestra 0 streams pero sé que hay reproducciones">
+  Esto es normal si acabas de lanzar tu música o si hay un retraso en la sincronización de datos. Las plataformas envían reportes a Addictiva Records con una frecuencia de **24 a 48 horas**, por lo que los streams recientes pueden no aparecer de inmediato.
 
-  - **Revisión por parte del distribuidor:** entre 1 y 5 días hábiles.
-  - **Revisión por parte de las plataformas:** entre 3 y 10 días hábiles adicionales.
+  **Pasos para verificar y forzar actualización:**
 
-  En total, el proceso completo puede tomar hasta **10 días hábiles** en condiciones normales. Durante fechas especiales (Navidad, temporadas de premios musicales, etc.) los tiempos pueden extenderse.
+  1. Espera al menos **48 horas** desde el momento en que sabes que hubo reproducciones.
+  2. Ve al Dashboard y haz clic en el ícono de **"Actualizar datos"** (ícono de recarga ↺) junto al nombre de la plataforma.
+  3. Verifica que el rango de fechas activo incluya el período en que ocurrieron los streams.
+  4. Confirma que la plataforma esté correctamente conectada en **Configuración > Plataformas**.
 
-  <Warning>
-    Si tu lanzamiento lleva **más de 15 días hábiles** en estado "En revisión" sin ninguna actualización, contacta a nuestro equipo de soporte. Es posible que haya un problema con el distribuidor que requiere intervención manual.
-  </Warning>
+  Si después de 72 horas los datos siguen en cero y las plataformas están conectadas, contacta a soporte con capturas de pantalla de los streams en la plataforma de origen.
 </Accordion>
 
-<Accordion title="Una plataforma rechazó mi lanzamiento">
-  Cuando una plataforma rechaza un lanzamiento, el motivo del rechazo aparece en la sección **Catálogo → Lanzamientos → [nombre del lanzamiento] → Historial de estado**. Las causas más comunes son:
+<Accordion title="Una plataforma no aparece en el dashboard">
+  Si no ves una plataforma específica en el panel de analíticas, probablemente no esté conectada a tu cuenta o la conexión haya expirado.
 
-  - **Errores de metadatos:** nombre del artista inconsistente, ISRC duplicado o inválido, o información de autoría incompleta.
-  - **Problemas con el artwork:** portada que no cumple las dimensiones, contiene texto prohibido o tiene baja resolución.
-  - **Contenido duplicado:** el mismo lanzamiento ya existe en la plataforma bajo otro distribuidor. Debes retirar la versión anterior antes de redistribuir.
-  - **Derechos de autor:** el contenido fue identificado como material con copyright de terceros sin la licencia correspondiente.
-
-  <Steps>
-    <Step title="Lee el motivo del rechazo">
-      Accede al historial de estado del lanzamiento y copia el mensaje exacto de rechazo.
-    </Step>
-    <Step title="Corrige el problema">
-      Edita los metadatos, reemplaza el artwork o regulariza la situación de licencias según corresponda.
-    </Step>
-    <Step title="Vuelve a enviar el lanzamiento">
-      Una vez corregido, haz clic en **"Reenviar a revisión"** desde el panel del lanzamiento.
-    </Step>
-  </Steps>
-</Accordion>
-
-<Accordion title="Mi música aparece en Spotify pero no en Apple Music">
-  Esto es completamente normal. Cada plataforma tiene su propio proceso de revisión e indexación, con tiempos independientes entre sí. Que un lanzamiento esté disponible en Spotify no garantiza que Apple Music lo haya procesado aún.
-
-  - **Spotify** suele procesar los lanzamientos en 3-5 días hábiles.
-  - **Apple Music** puede tardar entre 5 y 10 días hábiles.
-  - **Amazon Music** puede tardar hasta 7 días hábiles.
-
-  <Info>
-    Puedes hacer seguimiento del estado de tu lanzamiento en cada plataforma individualmente desde **Catálogo → Lanzamientos → [nombre del lanzamiento] → Estado por plataforma**.
-  </Info>
+  1. Ve a **Configuración > Plataformas** y verifica que la plataforma aparece con estado **"Conectada"** (indicador verde).
+  2. Si aparece con estado **"Desconectada"** o **"Error"**, sigue los pasos de la sección [Problemas de conexión](#problemas-de-conexión-con-plataformas) de esta misma guía.
+  3. Si la plataforma no aparece en la lista de plataformas disponibles, es posible que aún no sea compatible con Addictiva Records. Consulta nuestra lista de plataformas compatibles en **Configuración > Plataformas > Ver todas**.
 </Accordion>
 
 ---
 
-## Analíticas
+## Pagos y regalías
 
-<Accordion title="Los números de mis streams no coinciden con los de Spotify for Artists">
-  Es normal que exista una pequeña diferencia entre los datos que ves en Addictiva Records y los que muestra Spotify for Artists directamente. Esto se debe a que:
+<Accordion title="No recibo el pago esperado">
+  Si crees que debería llegarte un pago pero no lo has recibido, verifica los siguientes puntos:
 
-  - Addictiva Records sincroniza los datos de Spotify **cada 24 horas**, por lo que siempre hay un desfase de hasta un día.
-  - Spotify actualiza sus propias métricas internas con mayor frecuencia.
-  - Los datos consolidados pueden diferir ligeramente por diferencias de zona horaria en el conteo.
+  - **Saldo mínimo:** confirma que tu balance disponible es de al menos **$20.00 USD**. Si es inferior, el pago se acumula para el siguiente período.
+  - **Datos de pago correctos:** ve a **Configuración > Métodos de pago** y verifica que el correo de PayPal, IBAN, CLABE o datos bancarios estén escritos correctamente.
+  - **Formulario fiscal pendiente:** si no has completado el formulario W-8 o W-9, el pago puede estar retenido. Revisa **Configuración > Información fiscal**.
+  - **Plazo de procesamiento:** recuerda que los pagos tardan entre **5 y 10 días hábiles** en acreditarse después de que apruebas la solicitud de retiro.
 
-  <Tip>
-    Para ver los números más recientes en tiempo real, siempre puedes acceder directamente a [Spotify for Artists](https://artists.spotify.com). Addictiva Records es ideal para el seguimiento histórico y la comparación entre plataformas.
-  </Tip>
+  Si todo está en orden y han pasado más de 10 días hábiles, escríbenos a soporte@adictivarecords.com con el número de referencia de tu solicitud de retiro.
 </Accordion>
 
-<Accordion title="No veo ingresos en mi panel aunque tengo muchos streams">
-  Si tus canciones están activas y acumulando reproducciones pero no ves ingresos reflejados en el panel, ten en cuenta lo siguiente:
+<Accordion title="Mi pago fue rechazado">
+  Un pago puede ser rechazado por las siguientes causas comunes:
 
-  - Las plataformas de streaming reportan los datos de regalías a los distribuidores con un **desfase de 2 a 3 meses**.
-  - Los distribuidores, a su vez, procesan y transfieren esos datos a Addictiva Records en sus ciclos de liquidación habituales.
-  - Los ingresos de streams de enero, por ejemplo, suelen estar disponibles entre marzo y abril.
+  - **PayPal no verificado:** PayPal rechaza pagos entrantes a cuentas sin verificar. Accede a tu cuenta de PayPal y completa el proceso de verificación de identidad.
+  - **Datos bancarios incorrectos:** un solo dígito erróneo en el IBAN, CLABE o número de cuenta hace que la transferencia sea devuelta. Corrige los datos en **Configuración > Métodos de pago** y vuelve a solicitar el retiro.
+  - **Cuenta bancaria cerrada o inactiva:** si cerraste la cuenta bancaria vinculada, actualiza el método de pago con tus nuevos datos bancarios antes de realizar otra solicitud.
+  - **Límites del banco receptor:** algunos bancos tienen límites para recibir transferencias internacionales. Consulta con tu banco si el monto o el origen del pago está dentro de los límites permitidos.
 
-  <Note>
-    Si ya han pasado más de 3 meses desde que comenzaste a acumular streams significativos y aún no ves ningún ingreso, verifica que tu información de pago en tu distribuidor esté correctamente configurada. Addictiva Records no gestiona pagos directamente; eso lo hace el distribuidor.
-  </Note>
+  Después de corregir el problema que causó el rechazo, ve a **Ingresos > Historial**, localiza el pago rechazado y haz clic en **"Reintentar pago"**.
 </Accordion>
 
 ---
 
-## ¿Necesitas más ayuda?
+## ¿No encontraste la solución?
 
-Si ninguna de las soluciones anteriores resolvió tu problema, nuestro equipo está listo para asistirte.
+Si revisaste esta guía y el problema persiste, nuestro equipo de soporte está disponible para ayudarte. Escríbenos con la mayor cantidad de detalles posible: capturas de pantalla, número de lanzamiento o referencia de pago y los pasos que ya intentaste.
 
-<CardGroup cols={2}>
-  <Card title="Contactar Soporte" icon="envelope" href="mailto:soporte@adictivarecords.com">
-    Escríbenos directamente y un agente de soporte te responderá en un plazo máximo de 24 horas hábiles.
-  </Card>
-  <Card title="Ver Preguntas Frecuentes" icon="circle-question" href="/help/faq">
-    Consulta nuestra sección de preguntas frecuentes para encontrar respuestas rápidas a las dudas más comunes.
-  </Card>
-</CardGroup>
+**Email de soporte:** soporte@adictivarecords.com
+**Tiempo de respuesta:** 1 a 2 días hábiles
+
+<Card title="Consulta las preguntas frecuentes" icon="circle-question" href="/help/faq">
+  Antes de contactarnos, revisa nuestra sección de FAQ donde respondemos las dudas más comunes sobre planes, distribución, regalías y gestión de cuenta.
+</Card>
